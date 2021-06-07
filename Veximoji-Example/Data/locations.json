@@ -1,0 +1,1307 @@
+[
+  {
+    "isoCode": "AF",
+    "latitude": 33,
+    "longitude": 65
+  },
+  {
+    "isoCode": "AL",
+    "latitude": 41,
+    "longitude": 20
+  },
+  {
+    "isoCode": "DZ",
+    "latitude": 28,
+    "longitude": 3
+  },
+  {
+    "isoCode": "AS",
+    "latitude": -14.3333,
+    "longitude": -170
+  },
+  {
+    "isoCode": "AD",
+    "latitude": 42.5,
+    "longitude": 1.6
+  },
+  {
+    "isoCode": "AO",
+    "latitude": -12.5,
+    "longitude": 18.5
+  },
+  {
+    "isoCode": "AI",
+    "latitude": 18.25,
+    "longitude": -63.1667
+  },
+  {
+    "isoCode": "AQ",
+    "latitude": -90,
+    "longitude": 0
+  },
+  {
+    "isoCode": "AG",
+    "latitude": 17.05,
+    "longitude": -61.8
+  },
+  {
+    "isoCode": "AR",
+    "latitude": -34,
+    "longitude": -64
+  },
+  {
+    "isoCode": "AM",
+    "latitude": 40,
+    "longitude": 45
+  },
+  {
+    "isoCode": "AW",
+    "latitude": 12.5,
+    "longitude": -69.9667
+  },
+  {
+    "isoCode": "AU",
+    "latitude": -27,
+    "longitude": 133
+  },
+  {
+    "isoCode": "AT",
+    "latitude": 47.3333,
+    "longitude": 13.3333
+  },
+  {
+    "isoCode": "AZ",
+    "latitude": 40.5,
+    "longitude": 47.5
+  },
+  {
+    "isoCode": "BS",
+    "latitude": 24.25,
+    "longitude": -76
+  },
+  {
+    "isoCode": "BH",
+    "latitude": 26,
+    "longitude": 50.55
+  },
+  {
+    "isoCode": "BD",
+    "latitude": 24,
+    "longitude": 90
+  },
+  {
+    "isoCode": "BB",
+    "latitude": 13.1667,
+    "longitude": -59.5333
+  },
+  {
+    "isoCode": "BY",
+    "latitude": 53,
+    "longitude": 28
+  },
+  {
+    "isoCode": "BE",
+    "latitude": 50.8333,
+    "longitude": 4
+  },
+  {
+    "isoCode": "BZ",
+    "latitude": 17.25,
+    "longitude": -88.75
+  },
+  {
+    "isoCode": "BJ",
+    "latitude": 9.5,
+    "longitude": 2.25
+  },
+  {
+    "isoCode": "BM",
+    "latitude": 32.3333,
+    "longitude": -64.75
+  },
+  {
+    "isoCode": "BT",
+    "latitude": 27.5,
+    "longitude": 90.5
+  },
+  {
+    "isoCode": "BO",
+    "latitude": -17,
+    "longitude": -65
+  },
+  {
+    "isoCode": "BO",
+    "latitude": -17,
+    "longitude": -65
+  },
+  {
+    "isoCode": "BA",
+    "latitude": 44,
+    "longitude": 18
+  },
+  {
+    "isoCode": "BW",
+    "latitude": -22,
+    "longitude": 24
+  },
+  {
+    "isoCode": "BV",
+    "latitude": -54.4333,
+    "longitude": 3.4
+  },
+  {
+    "isoCode": "BR",
+    "latitude": -10,
+    "longitude": -55
+  },
+  {
+    "isoCode": "IO",
+    "latitude": -6,
+    "longitude": 71.5
+  },
+  {
+    "isoCode": "BN",
+    "latitude": 4.5,
+    "longitude": 114.6667
+  },
+  {
+    "isoCode": "BN",
+    "latitude": 4.5,
+    "longitude": 114.6667
+  },
+  {
+    "isoCode": "BG",
+    "latitude": 43,
+    "longitude": 25
+  },
+  {
+    "isoCode": "BF",
+    "latitude": 13,
+    "longitude": -2
+  },
+  {
+    "isoCode": "BI",
+    "latitude": -3.5,
+    "longitude": 30
+  },
+  {
+    "isoCode": "KH",
+    "latitude": 13,
+    "longitude": 105
+  },
+  {
+    "isoCode": "CM",
+    "latitude": 6,
+    "longitude": 12
+  },
+  {
+    "isoCode": "CA",
+    "latitude": 60,
+    "longitude": -95
+  },
+  {
+    "isoCode": "CV",
+    "latitude": 16,
+    "longitude": -24
+  },
+  {
+    "isoCode": "CW",
+    "latitude": 12,
+    "longitude": -69
+  },
+  {
+    "isoCode": "KY",
+    "latitude": 19.5,
+    "longitude": -80.5
+  },
+  {
+    "isoCode": "CF",
+    "latitude": 7,
+    "longitude": 21
+  },
+  {
+    "isoCode": "TD",
+    "latitude": 15,
+    "longitude": 19
+  },
+  {
+    "isoCode": "CL",
+    "latitude": -30,
+    "longitude": -71
+  },
+  {
+    "isoCode": "CN",
+    "latitude": 35,
+    "longitude": 105
+  },
+  {
+    "isoCode": "CX",
+    "latitude": -10.5,
+    "longitude": 105.6667
+  },
+  {
+    "isoCode": "CC",
+    "latitude": -12.5,
+    "longitude": 96.8333
+  },
+  {
+    "isoCode": "CO",
+    "latitude": 4,
+    "longitude": -72
+  },
+  {
+    "isoCode": "KM",
+    "latitude": -12.1667,
+    "longitude": 44.25
+  },
+  {
+    "isoCode": "CG",
+    "latitude": -1,
+    "longitude": 15
+  },
+  {
+    "isoCode": "CD",
+    "latitude": 0,
+    "longitude": 25
+  },
+  {
+    "isoCode": "CK",
+    "latitude": -21.2333,
+    "longitude": -159.7667
+  },
+  {
+    "isoCode": "CR",
+    "latitude": 10,
+    "longitude": -84
+  },
+  {
+    "isoCode": "CI",
+    "latitude": 8,
+    "longitude": -5
+  },
+  {
+    "isoCode": "CI",
+    "latitude": 8,
+    "longitude": -5
+  },
+  {
+    "isoCode": "HR",
+    "latitude": 45.1667,
+    "longitude": 15.5
+  },
+  {
+    "isoCode": "CU",
+    "latitude": 21.5,
+    "longitude": -80
+  },
+  {
+    "isoCode": "CY",
+    "latitude": 35,
+    "longitude": 33
+  },
+  {
+    "isoCode": "CZ",
+    "latitude": 49.75,
+    "longitude": 15.5
+  },
+  {
+    "isoCode": "DK",
+    "latitude": 56,
+    "longitude": 10
+  },
+  {
+    "isoCode": "DJ",
+    "latitude": 11.5,
+    "longitude": 43
+  },
+  {
+    "isoCode": "DM",
+    "latitude": 15.4167,
+    "longitude": -61.3333
+  },
+  {
+    "isoCode": "DO",
+    "latitude": 19,
+    "longitude": -70.6667
+  },
+  {
+    "isoCode": "EC",
+    "latitude": -2,
+    "longitude": -77.5
+  },
+  {
+    "isoCode": "EG",
+    "latitude": 27,
+    "longitude": 30
+  },
+  {
+    "isoCode": "SV",
+    "latitude": 13.8333,
+    "longitude": -88.9167
+  },
+  {
+    "isoCode": "GQ",
+    "latitude": 2,
+    "longitude": 10
+  },
+  {
+    "isoCode": "ER",
+    "latitude": 15,
+    "longitude": 39
+  },
+  {
+    "isoCode": "EE",
+    "latitude": 59,
+    "longitude": 26
+  },
+  {
+    "isoCode": "ET",
+    "latitude": 8,
+    "longitude": 38
+  },
+  {
+    "isoCode": "FK",
+    "latitude": -51.75,
+    "longitude": -59
+  },
+  {
+    "isoCode": "FO",
+    "latitude": 62,
+    "longitude": -7
+  },
+  {
+    "isoCode": "FJ",
+    "latitude": -18,
+    "longitude": 175
+  },
+  {
+    "isoCode": "FI",
+    "latitude": 64,
+    "longitude": 26
+  },
+  {
+    "isoCode": "FR",
+    "latitude": 46,
+    "longitude": 2
+  },
+  {
+    "isoCode": "GF",
+    "latitude": 4,
+    "longitude": -53
+  },
+  {
+    "isoCode": "PF",
+    "latitude": -15,
+    "longitude": -140
+  },
+  {
+    "isoCode": "TF",
+    "latitude": -43,
+    "longitude": 67
+  },
+  {
+    "isoCode": "GA",
+    "latitude": -1,
+    "longitude": 11.75
+  },
+  {
+    "isoCode": "GM",
+    "latitude": 13.4667,
+    "longitude": -16.5667
+  },
+  {
+    "isoCode": "GE",
+    "latitude": 42,
+    "longitude": 43.5
+  },
+  {
+    "isoCode": "DE",
+    "latitude": 51,
+    "longitude": 9
+  },
+  {
+    "isoCode": "GH",
+    "latitude": 8,
+    "longitude": -2
+  },
+  {
+    "isoCode": "GI",
+    "latitude": 36.1833,
+    "longitude": -5.3667
+  },
+  {
+    "isoCode": "GR",
+    "latitude": 39,
+    "longitude": 22
+  },
+  {
+    "isoCode": "GL",
+    "latitude": 72,
+    "longitude": -40
+  },
+  {
+    "isoCode": "GD",
+    "latitude": 12.1167,
+    "longitude": -61.6667
+  },
+  {
+    "isoCode": "GP",
+    "latitude": 16.25,
+    "longitude": -61.5833
+  },
+  {
+    "isoCode": "GU",
+    "latitude": 13.4667,
+    "longitude": 144.7833
+  },
+  {
+    "isoCode": "GT",
+    "latitude": 15.5,
+    "longitude": -90.25
+  },
+  {
+    "isoCode": "GG",
+    "latitude": 49.5,
+    "longitude": -2.56
+  },
+  {
+    "isoCode": "GN",
+    "latitude": 11,
+    "longitude": -10
+  },
+  {
+    "isoCode": "GW",
+    "latitude": 12,
+    "longitude": -15
+  },
+  {
+    "isoCode": "GY",
+    "latitude": 5,
+    "longitude": -59
+  },
+  {
+    "isoCode": "HT",
+    "latitude": 19,
+    "longitude": -72.4167
+  },
+  {
+    "isoCode": "HM",
+    "latitude": -53.1,
+    "longitude": 72.5167
+  },
+  {
+    "isoCode": "VA",
+    "latitude": 41.9,
+    "longitude": 12.45
+  },
+  {
+    "isoCode": "HN",
+    "latitude": 15,
+    "longitude": -86.5
+  },
+  {
+    "isoCode": "HK",
+    "latitude": 22.25,
+    "longitude": 114.1667
+  },
+  {
+    "isoCode": "HU",
+    "latitude": 47,
+    "longitude": 20
+  },
+  {
+    "isoCode": "IC",
+    "latitude": 28,
+    "longitude": -17
+  },
+  {
+    "isoCode": "IS",
+    "latitude": 65,
+    "longitude": -18
+  },
+  {
+    "isoCode": "IN",
+    "latitude": 20,
+    "longitude": 77
+  },
+  {
+    "isoCode": "ID",
+    "latitude": -5,
+    "longitude": 120
+  },
+  {
+    "isoCode": "IR",
+    "latitude": 32,
+    "longitude": 53
+  },
+  {
+    "isoCode": "IQ",
+    "latitude": 33,
+    "longitude": 44
+  },
+  {
+    "isoCode": "IE",
+    "latitude": 53,
+    "longitude": -8
+  },
+  {
+    "isoCode": "IM",
+    "latitude": 54.23,
+    "longitude": -4.55
+  },
+  {
+    "isoCode": "IL",
+    "latitude": 31.5,
+    "longitude": 34.75
+  },
+  {
+    "isoCode": "IT",
+    "latitude": 42.8333,
+    "longitude": 12.8333
+  },
+  {
+    "isoCode": "JM",
+    "latitude": 18.25,
+    "longitude": -77.5
+  },
+  {
+    "isoCode": "JP",
+    "latitude": 36,
+    "longitude": 138
+  },
+  {
+    "isoCode": "JE",
+    "latitude": 49.21,
+    "longitude": -2.13
+  },
+  {
+    "isoCode": "JO",
+    "latitude": 31,
+    "longitude": 36
+  },
+  {
+    "isoCode": "KZ",
+    "latitude": 48,
+    "longitude": 68
+  },
+  {
+    "isoCode": "KE",
+    "latitude": 1,
+    "longitude": 38
+  },
+  {
+    "isoCode": "KI",
+    "latitude": 1.4167,
+    "longitude": 173
+  },
+  {
+    "isoCode": "KP",
+    "latitude": 40,
+    "longitude": 127
+  },
+  {
+    "isoCode": "KR",
+    "latitude": 37,
+    "longitude": 127.5
+  },
+  {
+    "isoCode": "KR",
+    "latitude": 37,
+    "longitude": 127.5
+  },
+  {
+    "isoCode": "KW",
+    "latitude": 29.3375,
+    "longitude": 47.6581
+  },
+  {
+    "isoCode": "KG",
+    "latitude": 41,
+    "longitude": 75
+  },
+  {
+    "isoCode": "LA",
+    "latitude": 18,
+    "longitude": 105
+  },
+  {
+    "isoCode": "LV",
+    "latitude": 57,
+    "longitude": 25
+  },
+  {
+    "isoCode": "LB",
+    "latitude": 33.8333,
+    "longitude": 35.8333
+  },
+  {
+    "isoCode": "LS",
+    "latitude": -29.5,
+    "longitude": 28.5
+  },
+  {
+    "isoCode": "LR",
+    "latitude": 6.5,
+    "longitude": -9.5
+  },
+  {
+    "isoCode": "LY",
+    "latitude": 25,
+    "longitude": 17
+  },
+  {
+    "isoCode": "LY",
+    "latitude": 25,
+    "longitude": 17
+  },
+  {
+    "isoCode": "LI",
+    "latitude": 47.1667,
+    "longitude": 9.5333
+  },
+  {
+    "isoCode": "LT",
+    "latitude": 56,
+    "longitude": 24
+  },
+  {
+    "isoCode": "LU",
+    "latitude": 49.75,
+    "longitude": 6.1667
+  },
+  {
+    "isoCode": "MO",
+    "latitude": 22.1667,
+    "longitude": 113.55
+  },
+  {
+    "isoCode": "MK",
+    "latitude": 41.8333,
+    "longitude": 22
+  },
+  {
+    "isoCode": "MG",
+    "latitude": -20,
+    "longitude": 47
+  },
+  {
+    "isoCode": "MW",
+    "latitude": -13.5,
+    "longitude": 34
+  },
+  {
+    "isoCode": "MY",
+    "latitude": 2.5,
+    "longitude": 112.5
+  },
+  {
+    "isoCode": "MV",
+    "latitude": 3.25,
+    "longitude": 73
+  },
+  {
+    "isoCode": "ML",
+    "latitude": 17,
+    "longitude": -4
+  },
+  {
+    "isoCode": "MT",
+    "latitude": 35.8333,
+    "longitude": 14.5833
+  },
+  {
+    "isoCode": "MH",
+    "latitude": 9,
+    "longitude": 168
+  },
+  {
+    "isoCode": "MQ",
+    "latitude": 14.6667,
+    "longitude": -61
+  },
+  {
+    "isoCode": "MR",
+    "latitude": 20,
+    "longitude": -12
+  },
+  {
+    "isoCode": "MU",
+    "latitude": -20.2833,
+    "longitude": 57.55
+  },
+  {
+    "isoCode": "YT",
+    "latitude": -12.8333,
+    "longitude": 45.1667
+  },
+  {
+    "isoCode": "MX",
+    "latitude": 23,
+    "longitude": -102
+  },
+  {
+    "isoCode": "FM",
+    "latitude": 6.9167,
+    "longitude": 158.25
+  },
+  {
+    "isoCode": "MD",
+    "latitude": 47,
+    "longitude": 29
+  },
+  {
+    "isoCode": "MC",
+    "latitude": 43.7333,
+    "longitude": 7.4
+  },
+  {
+    "isoCode": "MN",
+    "latitude": 46,
+    "longitude": 105
+  },
+  {
+    "isoCode": "ME",
+    "latitude": 42,
+    "longitude": 19
+  },
+  {
+    "isoCode": "MS",
+    "latitude": 16.75,
+    "longitude": -62.2
+  },
+  {
+    "isoCode": "MA",
+    "latitude": 32,
+    "longitude": -5
+  },
+  {
+    "isoCode": "MZ",
+    "latitude": -18.25,
+    "longitude": 35
+  },
+  {
+    "isoCode": "MM",
+    "latitude": 22,
+    "longitude": 98
+  },
+  {
+    "isoCode": "MM",
+    "latitude": 22,
+    "longitude": 98
+  },
+  {
+    "isoCode": "NA",
+    "latitude": -22,
+    "longitude": 17
+  },
+  {
+    "isoCode": "NR",
+    "latitude": -0.5333,
+    "longitude": 166.9167
+  },
+  {
+    "isoCode": "NP",
+    "latitude": 28,
+    "longitude": 84
+  },
+  {
+    "isoCode": "NL",
+    "latitude": 52.5,
+    "longitude": 5.75
+  },
+  {
+    "isoCode": "AN",
+    "latitude": 12.25,
+    "longitude": -68.75
+  },
+  {
+    "isoCode": "NC",
+    "latitude": -21.5,
+    "longitude": 165.5
+  },
+  {
+    "isoCode": "NZ",
+    "latitude": -41,
+    "longitude": 174
+  },
+  {
+    "isoCode": "NI",
+    "latitude": 13,
+    "longitude": -85
+  },
+  {
+    "isoCode": "NE",
+    "latitude": 16,
+    "longitude": 8
+  },
+  {
+    "isoCode": "NG",
+    "latitude": 10,
+    "longitude": 8
+  },
+  {
+    "isoCode": "NU",
+    "latitude": -19.0333,
+    "longitude": -169.8667
+  },
+  {
+    "isoCode": "NF",
+    "latitude": -29.0333,
+    "longitude": 167.95
+  },
+  {
+    "isoCode": "MP",
+    "latitude": 15.2,
+    "longitude": 145.75
+  },
+  {
+    "isoCode": "NO",
+    "latitude": 62,
+    "longitude": 10
+  },
+  {
+    "isoCode": "OM",
+    "latitude": 21,
+    "longitude": 57
+  },
+  {
+    "isoCode": "PK",
+    "latitude": 30,
+    "longitude": 70
+  },
+  {
+    "isoCode": "PW",
+    "latitude": 7.5,
+    "longitude": 134.5
+  },
+  {
+    "isoCode": "PS",
+    "latitude": 32,
+    "longitude": 35.25
+  },
+  {
+    "isoCode": "PA",
+    "latitude": 9,
+    "longitude": -80
+  },
+  {
+    "isoCode": "PG",
+    "latitude": -6,
+    "longitude": 147
+  },
+  {
+    "isoCode": "PY",
+    "latitude": -23,
+    "longitude": -58
+  },
+  {
+    "isoCode": "PE",
+    "latitude": -10,
+    "longitude": -76
+  },
+  {
+    "isoCode": "PH",
+    "latitude": 13,
+    "longitude": 122
+  },
+  {
+    "isoCode": "PN",
+    "latitude": -24.7,
+    "longitude": -127.4
+  },
+  {
+    "isoCode": "PL",
+    "latitude": 52,
+    "longitude": 20
+  },
+  {
+    "isoCode": "PT",
+    "latitude": 39.5,
+    "longitude": -8
+  },
+  {
+    "isoCode": "PR",
+    "latitude": 18.25,
+    "longitude": -66.5
+  },
+  {
+    "isoCode": "QA",
+    "latitude": 25.5,
+    "longitude": 51.25
+  },
+  {
+    "isoCode": "RE",
+    "latitude": -21.1,
+    "longitude": 55.6
+  },
+  {
+    "isoCode": "RO",
+    "latitude": 46,
+    "longitude": 25
+  },
+  {
+    "isoCode": "RU",
+    "latitude": 60,
+    "longitude": 100
+  },
+  {
+    "isoCode": "RU",
+    "latitude": 60,
+    "longitude": 100
+  },
+  {
+    "isoCode": "RW",
+    "latitude": -2,
+    "longitude": 30
+  },
+  {
+    "isoCode": "SH",
+    "latitude": -15.9333,
+    "longitude": -5.7
+  },
+  {
+    "isoCode": "KN",
+    "latitude": 17.3333,
+    "longitude": -62.75
+  },
+  {
+    "isoCode": "LC",
+    "latitude": 13.8833,
+    "longitude": -61.1333
+  },
+  {
+    "isoCode": "PM",
+    "latitude": 46.8333,
+    "longitude": -56.3333
+  },
+  {
+    "isoCode": "VC",
+    "latitude": 13.25,
+    "longitude": -61.2
+  },
+  {
+    "isoCode": "VC",
+    "latitude": 13.25,
+    "longitude": -61.2
+  },
+  {
+    "isoCode": "VC",
+    "latitude": 13.25,
+    "longitude": -61.2
+  },
+  {
+    "isoCode": "WS",
+    "latitude": -13.5833,
+    "longitude": -172.3333
+  },
+  {
+    "isoCode": "SM",
+    "latitude": 43.7667,
+    "longitude": 12.4167
+  },
+  {
+    "isoCode": "ST",
+    "latitude": 1,
+    "longitude": 7
+  },
+  {
+    "isoCode": "SA",
+    "latitude": 25,
+    "longitude": 45
+  },
+  {
+    "isoCode": "SN",
+    "latitude": 14,
+    "longitude": -14
+  },
+  {
+    "isoCode": "RS",
+    "latitude": 44,
+    "longitude": 21
+  },
+  {
+    "isoCode": "SC",
+    "latitude": -4.5833,
+    "longitude": 55.6667
+  },
+  {
+    "isoCode": "SL",
+    "latitude": 8.5,
+    "longitude": -11.5
+  },
+  {
+    "isoCode": "SG",
+    "latitude": 1.3667,
+    "longitude": 103.8
+  },
+  {
+    "isoCode": "SK",
+    "latitude": 48.6667,
+    "longitude": 19.5
+  },
+  {
+    "isoCode": "SI",
+    "latitude": 46,
+    "longitude": 15
+  },
+  {
+    "isoCode": "SB",
+    "latitude": -8,
+    "longitude": 159
+  },
+  {
+    "isoCode": "SO",
+    "latitude": 10,
+    "longitude": 49
+  },
+  {
+    "isoCode": "ZA",
+    "latitude": -29,
+    "longitude": 24
+  },
+  {
+    "isoCode": "GS",
+    "latitude": -54.5,
+    "longitude": -37
+  },
+  {
+    "isoCode": "SS",
+    "latitude": 8,
+    "longitude": 30
+  },
+  {
+    "isoCode": "ES",
+    "latitude": 40,
+    "longitude": -4
+  },
+  {
+    "isoCode": "LK",
+    "latitude": 7,
+    "longitude": 81
+  },
+  {
+    "isoCode": "SD",
+    "latitude": 15,
+    "longitude": 30
+  },
+  {
+    "isoCode": "SR",
+    "latitude": 4,
+    "longitude": -56
+  },
+  {
+    "isoCode": "SJ",
+    "latitude": 78,
+    "longitude": 20
+  },
+  {
+    "isoCode": "SZ",
+    "latitude": -26.5,
+    "longitude": 31.5
+  },
+  {
+    "isoCode": "SE",
+    "latitude": 62,
+    "longitude": 15
+  },
+  {
+    "isoCode": "CH",
+    "latitude": 47,
+    "longitude": 8
+  },
+  {
+    "isoCode": "SY",
+    "latitude": 35,
+    "longitude": 38
+  },
+  {
+    "isoCode": "TW",
+    "latitude": 23.5,
+    "longitude": 121
+  },
+  {
+    "isoCode": "TW",
+    "latitude": 23.5,
+    "longitude": 121
+  },
+  {
+    "isoCode": "TJ",
+    "latitude": 39,
+    "longitude": 71
+  },
+  {
+    "isoCode": "TZ",
+    "latitude": -6,
+    "longitude": 35
+  },
+  {
+    "isoCode": "TH",
+    "latitude": 15,
+    "longitude": 100
+  },
+  {
+    "isoCode": "TL",
+    "latitude": -8.55,
+    "longitude": 125.5167
+  },
+  {
+    "isoCode": "TG",
+    "latitude": 8,
+    "longitude": 1.1667
+  },
+  {
+    "isoCode": "TK",
+    "latitude": -9,
+    "longitude": -172
+  },
+  {
+    "isoCode": "TO",
+    "latitude": -20,
+    "longitude": -175
+  },
+  {
+    "isoCode": "TT",
+    "latitude": 11,
+    "longitude": -61
+  },
+  {
+    "isoCode": "TN",
+    "latitude": 34,
+    "longitude": 9
+  },
+  {
+    "isoCode": "TR",
+    "latitude": 39,
+    "longitude": 35
+  },
+  {
+    "isoCode": "TM",
+    "latitude": 40,
+    "longitude": 60
+  },
+  {
+    "isoCode": "TC",
+    "latitude": 21.75,
+    "longitude": -71.5833
+  },
+  {
+    "isoCode": "TV",
+    "latitude": -8,
+    "longitude": 178
+  },
+  {
+    "isoCode": "UG",
+    "latitude": 1,
+    "longitude": 32
+  },
+  {
+    "isoCode": "UA",
+    "latitude": 49,
+    "longitude": 32
+  },
+  {
+    "isoCode": "AE",
+    "latitude": 24,
+    "longitude": 54
+  },
+  {
+    "isoCode": "GB",
+    "latitude": 54,
+    "longitude": -2
+  },
+  {
+    "isoCode": "GB-ENG",
+    "latitude": 51,
+    "longitude": -0.11
+  },
+  {
+    "isoCode": "GB-SCT",
+    "latitude": 56,
+    "longitude": -4
+  },
+  {
+    "isoCode": "GB-WLS",
+    "latitude": 51,
+    "longitude": -3
+  },
+  {
+    "isoCode": "US",
+    "latitude": 38,
+    "longitude": -97
+  },
+  {
+    "isoCode": "UM",
+    "latitude": 19.2833,
+    "longitude": 166.6
+  },
+  {
+    "isoCode": "UY",
+    "latitude": -33,
+    "longitude": -56
+  },
+  {
+    "isoCode": "UZ",
+    "latitude": 41,
+    "longitude": 64
+  },
+  {
+    "isoCode": "VU",
+    "latitude": -16,
+    "longitude": 167
+  },
+  {
+    "isoCode": "VE",
+    "latitude": 8,
+    "longitude": -66
+  },
+  {
+    "isoCode": "VE",
+    "latitude": 8,
+    "longitude": -66
+  },
+  {
+    "isoCode": "VN",
+    "latitude": 16,
+    "longitude": 106
+  },
+  {
+    "isoCode": "VN",
+    "latitude": 16,
+    "longitude": 106
+  },
+  {
+    "isoCode": "VG",
+    "latitude": 18.5,
+    "longitude": -64.5
+  },
+  {
+    "isoCode": "VI",
+    "latitude": 18.3333,
+    "longitude": -64.8333
+  },
+  {
+    "isoCode": "WF",
+    "latitude": -13.3,
+    "longitude": -176.2
+  },
+  {
+    "isoCode": "EH",
+    "latitude": 24.5,
+    "longitude": -13
+  },
+  {
+    "isoCode": "YE",
+    "latitude": 15,
+    "longitude": 48
+  },
+  {
+    "isoCode": "ZM",
+    "latitude": -15,
+    "longitude": 30
+  },
+  {
+    "isoCode": "ZW",
+    "latitude": -20,
+    "longitude": 30
+  }
+]

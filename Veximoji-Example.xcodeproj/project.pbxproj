@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23304BFA2658911C007ED020 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BF92658911C007ED020 /* HomeViewCell.swift */; };
+		23304BFE2658CF82007ED020 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BFD2658CF82007ED020 /* FilterTableViewController.swift */; };
+		233545602659A2AC003F246F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335455F2659A2AC003F246F /* DetailViewController.swift */; };
+		233545632659A4CA003F246F /* EmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545622659A4CA003F246F /* EmojiFlag.swift */; };
+		233545652659C0A4003F246F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545642659C0A4003F246F /* UIView+Ext.swift */; };
+		23354569265A3748003F246F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23354568265A3748003F246F /* Location.swift */; };
+		2335456B265A37C5003F246F /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 2335456A265A37C5003F246F /* locations.json */; };
+		2335456E265AD3BA003F246F /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335456D265AD3BA003F246F /* LocationDataManager.swift */; };
+		2376A5DC26578A9000E9A128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5DB26578A9000E9A128 /* AppDelegate.swift */; };
+		2376A5DE26578A9000E9A128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5DD26578A9000E9A128 /* SceneDelegate.swift */; };
+		2376A5E526578A9400E9A128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2376A5E426578A9400E9A128 /* Assets.xcassets */; };
+		2376A5E826578A9400E9A128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2376A5E626578A9400E9A128 /* LaunchScreen.storyboard */; };
+		2376A5F026578EB700E9A128 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5EF26578EB700E9A128 /* HomeViewController.swift */; };
+		2376A5F32657934E00E9A128 /* Veximoji in Frameworks */ = {isa = PBXBuildFile; productRef = 2376A5F22657934E00E9A128 /* Veximoji */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		23304BF92658911C007ED020 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		23304BFD2658CF82007ED020 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
+		2335455F2659A2AC003F246F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		233545622659A4CA003F246F /* EmojiFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFlag.swift; sourceTree = "<group>"; };
+		233545642659C0A4003F246F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
+		23354568265A3748003F246F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		2335456A265A37C5003F246F /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
+		2335456D265AD3BA003F246F /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
+		2376A5D826578A9000E9A128 /* Veximoji-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Veximoji-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2376A5DB26578A9000E9A128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2376A5DD26578A9000E9A128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		2376A5E426578A9400E9A128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2376A5E726578A9400E9A128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2376A5E926578A9400E9A128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2376A5EF26578EB700E9A128 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2376A5D526578A9000E9A128 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2376A5F32657934E00E9A128 /* Veximoji in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		23304BFB2658CF44007ED020 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2376A5EF26578EB700E9A128 /* HomeViewController.swift */,
+				23304BFD2658CF82007ED020 /* FilterTableViewController.swift */,
+				2335455F2659A2AC003F246F /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		23304BFC2658CF57007ED020 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				23304BF92658911C007ED020 /* HomeViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		233545612659A4B6003F246F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				23354568265A3748003F246F /* Location.swift */,
+				233545622659A4CA003F246F /* EmojiFlag.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		233545662659C0A7003F246F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				233545642659C0A4003F246F /* UIView+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		23354567265A372E003F246F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2335456A265A37C5003F246F /* locations.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2335456C265AD3A4003F246F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				2335456D265AD3BA003F246F /* LocationDataManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2376A5CF26578A9000E9A128 = {
+			isa = PBXGroup;
+			children = (
+				2376A5DA26578A9000E9A128 /* Veximoji-Example */,
+				2376A5D926578A9000E9A128 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2376A5D926578A9000E9A128 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2376A5D826578A9000E9A128 /* Veximoji-Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2376A5DA26578A9000E9A128 /* Veximoji-Example */ = {
+			isa = PBXGroup;
+			children = (
+				2335456C265AD3A4003F246F /* Managers */,
+				23354567265A372E003F246F /* Data */,
+				233545662659C0A7003F246F /* Extensions */,
+				233545612659A4B6003F246F /* Models */,
+				23304BFC2658CF57007ED020 /* Cells */,
+				23304BFB2658CF44007ED020 /* Controllers */,
+				2376A5DB26578A9000E9A128 /* AppDelegate.swift */,
+				2376A5DD26578A9000E9A128 /* SceneDelegate.swift */,
+				2376A5E426578A9400E9A128 /* Assets.xcassets */,
+				2376A5E626578A9400E9A128 /* LaunchScreen.storyboard */,
+				2376A5E926578A9400E9A128 /* Info.plist */,
+			);
+			path = "Veximoji-Example";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2376A5D726578A9000E9A128 /* Veximoji-Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2376A5EC26578A9400E9A128 /* Build configuration list for PBXNativeTarget "Veximoji-Example" */;
+			buildPhases = (
+				2376A5D426578A9000E9A128 /* Sources */,
+				2376A5D526578A9000E9A128 /* Frameworks */,
+				2376A5D626578A9000E9A128 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Veximoji-Example";
+			packageProductDependencies = (
+				2376A5F22657934E00E9A128 /* Veximoji */,
+			);
+			productName = VeximojiDemo;
+			productReference = 2376A5D826578A9000E9A128 /* Veximoji-Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2376A5D026578A9000E9A128 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					2376A5D726578A9000E9A128 = {
+						CreatedOnToolsVersion = 12.5;
+					};
+				};
+			};
+			buildConfigurationList = 2376A5D326578A9000E9A128 /* Build configuration list for PBXProject "Veximoji-Example" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2376A5CF26578A9000E9A128;
+			packageReferences = (
+				2376A5F12657934E00E9A128 /* XCRemoteSwiftPackageReference "Veximoji" */,
+			);
+			productRefGroup = 2376A5D926578A9000E9A128 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2376A5D726578A9000E9A128 /* Veximoji-Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2376A5D626578A9000E9A128 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2376A5E826578A9400E9A128 /* LaunchScreen.storyboard in Resources */,
+				2335456B265A37C5003F246F /* locations.json in Resources */,
+				2376A5E526578A9400E9A128 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2376A5D426578A9000E9A128 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23354569265A3748003F246F /* Location.swift in Sources */,
+				233545652659C0A4003F246F /* UIView+Ext.swift in Sources */,
+				2376A5DC26578A9000E9A128 /* AppDelegate.swift in Sources */,
+				23304BFA2658911C007ED020 /* HomeViewCell.swift in Sources */,
+				2335456E265AD3BA003F246F /* LocationDataManager.swift in Sources */,
+				2376A5DE26578A9000E9A128 /* SceneDelegate.swift in Sources */,
+				233545602659A2AC003F246F /* DetailViewController.swift in Sources */,
+				23304BFE2658CF82007ED020 /* FilterTableViewController.swift in Sources */,
+				233545632659A4CA003F246F /* EmojiFlag.swift in Sources */,
+				2376A5F026578EB700E9A128 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		2376A5E626578A9400E9A128 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2376A5E726578A9400E9A128 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2376A5EA26578A9400E9A128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2376A5EB26578A9400E9A128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		2376A5ED26578A9400E9A128 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYK6GDE7V9;
+				INFOPLIST_FILE = "Veximoji-Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notenoughscience.Veximoji-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		2376A5EE26578A9400E9A128 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = RYK6GDE7V9;
+				INFOPLIST_FILE = "Veximoji-Example/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.notenoughscience.Veximoji-Example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2376A5D326578A9000E9A128 /* Build configuration list for PBXProject "Veximoji-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2376A5EA26578A9400E9A128 /* Debug */,
+				2376A5EB26578A9400E9A128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2376A5EC26578A9400E9A128 /* Build configuration list for PBXNativeTarget "Veximoji-Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2376A5ED26578A9400E9A128 /* Debug */,
+				2376A5EE26578A9400E9A128 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2376A5F12657934E00E9A128 /* XCRemoteSwiftPackageReference "Veximoji" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roz0n/Veximoji.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2376A5F22657934E00E9A128 /* Veximoji */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2376A5F12657934E00E9A128 /* XCRemoteSwiftPackageReference "Veximoji" */;
+			productName = Veximoji;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 2376A5D026578A9000E9A128 /* Project object */;
+}

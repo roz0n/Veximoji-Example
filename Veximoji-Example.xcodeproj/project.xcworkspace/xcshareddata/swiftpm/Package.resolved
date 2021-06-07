@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Veximoji",
+        "repositoryURL": "https://github.com/roz0n/Veximoji.git",
+        "state": {
+          "branch": "main",
+          "revision": "ec918af2eccca0552c14df0c7a846135a0657dc5",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
