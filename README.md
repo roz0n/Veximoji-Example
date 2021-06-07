@@ -5,9 +5,9 @@ A non-trivial iOS app that showcases the [Veximoji](https://github.com/roz0n/Vex
 ![Veximoji Example App Demo](./demo.gif)
 
 ## Requirements
-- Xcode 11+
-- iOS 13+
-- Swift 5+
+- Xcode 10.2+
+- iOS 13.0+
+- Swift 5.0+
 
 ## Usage
 Follow standard iOS development conventions:
