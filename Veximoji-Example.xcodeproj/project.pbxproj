@@ -15,6 +15,7 @@
 		23354569265A3748003F246F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23354568265A3748003F246F /* Location.swift */; };
 		2335456B265A37C5003F246F /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 2335456A265A37C5003F246F /* locations.json */; };
 		2335456E265AD3BA003F246F /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335456D265AD3BA003F246F /* LocationDataManager.swift */; };
+		2372432826CF782400C7981A /* Veximoji in Resources */ = {isa = PBXBuildFile; fileRef = 2372432726CF782400C7981A /* Veximoji */; };
 		2376A5DC26578A9000E9A128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5DB26578A9000E9A128 /* AppDelegate.swift */; };
 		2376A5DE26578A9000E9A128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5DD26578A9000E9A128 /* SceneDelegate.swift */; };
 		2376A5E526578A9400E9A128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2376A5E426578A9400E9A128 /* Assets.xcassets */; };
@@ -32,6 +33,8 @@
 		23354568265A3748003F246F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		2335456A265A37C5003F246F /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
 		2335456D265AD3BA003F246F /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
+		2372432626CF766200C7981A /* Veximoji-Playground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = "Veximoji-Playground.playground"; path = "/Users/arnaldo/Development/ios/projects/Veximoji-Example/Veximoji-Playground.playground"; sourceTree = "<absolute>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		2372432726CF782400C7981A /* Veximoji */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Veximoji; path = ../../libraries/Veximoji; sourceTree = "<group>"; };
 		2376A5D826578A9000E9A128 /* Veximoji-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Veximoji-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2376A5DB26578A9000E9A128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2376A5DD26578A9000E9A128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 		2376A5CF26578A9000E9A128 = {
 			isa = PBXGroup;
 			children = (
+				2372432726CF782400C7981A /* Veximoji */,
+				2372432626CF766200C7981A /* Veximoji-Playground.playground */,
 				2376A5DA26578A9000E9A128 /* Veximoji-Example */,
 				2376A5D926578A9000E9A128 /* Products */,
 			);
@@ -204,6 +209,7 @@
 				2376A5E826578A9400E9A128 /* LaunchScreen.storyboard in Resources */,
 				2335456B265A37C5003F246F /* locations.json in Resources */,
 				2376A5E526578A9400E9A128 /* Assets.xcassets in Resources */,
+				2372432826CF782400C7981A /* Veximoji in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
