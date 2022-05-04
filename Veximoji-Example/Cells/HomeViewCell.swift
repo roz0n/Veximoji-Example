@@ -10,7 +10,7 @@ import UIKit
 class HomeViewCell: UITableViewCell {
   
   static let reuseId = "vxCell"
-    
+  
   var flagData: EmojiFlag? {
     didSet {
       guard let data = flagData else { return }
@@ -57,17 +57,18 @@ class HomeViewCell: UITableViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.numberOfLines = 1
-    label.font = UIFont.monospacedSystemFont(ofSize: 16, weight: .regular)
+    label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
     label.layer.cornerRadius = 4
     label.layer.masksToBounds = true
     return label
   }()
   
-  // MARK: Initializers
+  // MARK: - Initializers
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
+    configureSelectedBackground()
     layoutStackContainer()
     layoutLabels()
   }
@@ -76,11 +77,20 @@ class HomeViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
+  // MARK: - Configuration
+  
+  private func configureSelectedBackground() {
+    let background = UIView()
+    
+    background.backgroundColor = UIColor(named: "AccentColor")?.withAlphaComponent(0.1)
+    selectedBackgroundView = background
+  }
+  
   // MARK: - Layout
   
   private func layoutStackContainer() {
     let padding: CGFloat = 16
-
+    
     addSubview(stackContainter)
     
     NSLayoutConstraint.activate([

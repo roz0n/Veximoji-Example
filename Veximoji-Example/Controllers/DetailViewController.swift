@@ -85,7 +85,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
   let flagContainer: UIView = {
     let view = UIView()
     view.translatesAutoresizingMaskIntoConstraints = false
-    view.backgroundColor = .systemGray5
+    view.backgroundColor = UIColor(named: "AccentColor")!.withAlphaComponent(0.1)
     view.layer.cornerRadius = 8
     view.layer.masksToBounds = true
     return view
@@ -95,7 +95,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     let stack = UIStackView()
     stack.translatesAutoresizingMaskIntoConstraints = false
     stack.axis = .vertical
-    stack.spacing = 20
+    stack.spacing = 16
     return stack
   }()
   
@@ -121,9 +121,8 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
   let codeHeaderLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "Code".uppercased()
     label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-    label.textColor = .systemGray2
+    label.textColor = UIColor(named: "AccentColor")!
     return label
   }()
   
@@ -131,7 +130,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = "Name".uppercased()
-    label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+    label.font = UIFont.systemFont(ofSize: 11, weight: .bold)
     label.textColor = .systemGray2
     return label
   }()
@@ -140,7 +139,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.text = "Group".uppercased()
-    label.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+    label.font = UIFont.systemFont(ofSize: 11, weight: .bold)
     label.textColor = .systemGray2
     return label
   }()
@@ -158,6 +157,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.font = UIFont.monospacedSystemFont(ofSize: 20, weight: .bold)
+    label.textColor = UIColor(named: "AccentColor")
     return label
   }()
   
@@ -180,7 +180,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
   let copyCodeButton: UIButton = {
     let button = UIButton(type: .system)
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.backgroundColor = UIColor(named: "AccentColor")!.withAlphaComponent(0.2)
+    button.backgroundColor = UIColor(named: "AccentColor")!.withAlphaComponent(0.1)
     button.tintColor = UIColor(named: "AccentColor")
     button.layer.cornerRadius = 8
     button.layer.masksToBounds = true
@@ -194,7 +194,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
   let copyEmojiButton: UIButton = {
     let button = UIButton(type: .system)
     button.translatesAutoresizingMaskIntoConstraints = false
-    button.backgroundColor = UIColor(named: "AccentColor")!.withAlphaComponent(0.2)
+    button.backgroundColor = UIColor(named: "AccentColor")!.withAlphaComponent(0.1)
     button.tintColor = UIColor(named: "AccentColor")
     button.layer.cornerRadius = 8
     button.layer.masksToBounds = true
@@ -248,11 +248,12 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
   
   // MARK: - Helpers
   
-  fileprivate func wrapInBorderView(view: UILabel) -> UIView {
+  fileprivate func wrapInBorderView(view: UILabel, width: CGFloat = CGFloat(1), color: UIColor = .systemGray5) -> UIView {
     let borderView = UIView()
-    let yPadding: CGFloat = 10
+    let yPadding: CGFloat = 8
     
-    borderView.addBorder(borders: [.Bottom], color: .systemGray5, width: 1)
+    borderView.addBorder(borders: [.Bottom],
+                         color: color, width: width)
     borderView.addSubview(view)
     
     NSLayoutConstraint.activate([
@@ -270,7 +271,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     
     fieldContainer.translatesAutoresizingMaskIntoConstraints = false
     fieldContainer.axis = .vertical
-    fieldContainer.spacing = 8
+    fieldContainer.spacing = 4
     
     for view in views {
       fieldContainer.addArrangedSubview(view)
@@ -320,7 +321,7 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     
     scrollContainer.addSubview(flagContainer)
     flagContainer.addSubview(emojiDataLabel)
-
+    
     NSLayoutConstraint.activate([
       flagContainer.topAnchor.constraint(equalTo: scrollContainer.topAnchor, constant: yPadding),
       flagContainer.leadingAnchor.constraint(equalTo: scrollContainer.leadingAnchor, constant: xPadding),
@@ -342,12 +343,12 @@ class DetailViewController: UIViewController, MKMapViewDelegate {
     NSLayoutConstraint.activate([
       detailsContainer.topAnchor.constraint(equalTo: flagContainer.bottomAnchor, constant: yPadding),
       detailsContainer.leadingAnchor.constraint(equalTo: scrollContainer.leadingAnchor, constant: xPadding),
-      detailsContainer.trailingAnchor.constraint(equalTo: scrollContainer.trailingAnchor, constant: -xPadding)
+      detailsContainer.trailingAnchor.constraint(equalTo: scrollContainer.trailingAnchor)
     ])
   }
   
   fileprivate func layoutFieldLabels() {
-    let codeField = wrapInFieldContainer(views: [codeHeaderLabel, wrapInBorderView(view: codeDataLabel)])
+    let codeField = wrapInFieldContainer(views: [codeHeaderLabel, wrapInBorderView(view: codeDataLabel, width: 2.5, color: UIColor(named: "AccentColor")!)])
     let nameField = wrapInFieldContainer(views: [nameHeaderLabel, wrapInBorderView(view: nameDataLabel)])
     let groupField = wrapInFieldContainer(views: [groupHeaderLabel, wrapInBorderView(view: groupDataLabel)])
     
