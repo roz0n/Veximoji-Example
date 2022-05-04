@@ -46,7 +46,7 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
     Veximoji.FlagCategories.country.rawValue: Veximoji.countryCodes,
     Veximoji.FlagCategories.subdivision.rawValue: Veximoji.subdivisionCodes,
     Veximoji.FlagCategories.international.rawValue: Veximoji.internationalCodes,
-    Veximoji.FlagCategories.cultural.rawValue: Veximoji.culturalTerms
+    Veximoji.FlagCategories.unique.rawValue: Veximoji.uniqueTerms
   ]
   
   // MARK: - View Lifecycle
@@ -177,8 +177,8 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
           emoji = Veximoji.subdivision(code: code)
         case Veximoji.FlagCategories.international.rawValue:
           emoji = Veximoji.international(code: code)
-        case Veximoji.FlagCategories.cultural.rawValue:
-          emoji = Veximoji.cultural(term: Veximoji.CulturalTerms(rawValue: code)!)
+        case Veximoji.FlagCategories.unique.rawValue:
+          emoji = Veximoji.unique(term: Veximoji.UniqueTerms(rawValue: code)!)
         default:
           break
       }
@@ -213,7 +213,7 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
       Veximoji.FlagCategories.country.rawValue: Veximoji.countryCodes,
       Veximoji.FlagCategories.subdivision.rawValue: Veximoji.subdivisionCodes,
       Veximoji.FlagCategories.international.rawValue: Veximoji.internationalCodes,
-      Veximoji.FlagCategories.cultural.rawValue: Veximoji.culturalTerms
+      Veximoji.FlagCategories.unique.rawValue: Veximoji.uniqueTerms
     ]
     
     tableView.reloadData()
@@ -226,7 +226,7 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
       Veximoji.FlagCategories.country.rawValue: Veximoji.countryCodes.filter { $0.contains(query.uppercased()) },
       Veximoji.FlagCategories.subdivision.rawValue: Veximoji.subdivisionCodes.filter { $0.contains(query.uppercased()) },
       Veximoji.FlagCategories.international.rawValue: Veximoji.internationalCodes.filter { $0.contains(query.uppercased()) },
-      Veximoji.FlagCategories.cultural.rawValue: Veximoji.culturalTerms.filter { $0.contains(query.lowercased()) }
+      Veximoji.FlagCategories.unique.rawValue: Veximoji.uniqueTerms.filter { $0.contains(query.lowercased()) }
     ]
     
     sectionData = filteredData

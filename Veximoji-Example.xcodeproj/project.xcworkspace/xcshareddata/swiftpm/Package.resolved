@@ -1,16 +1,14 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "Veximoji",
-        "repositoryURL": "https://github.com/roz0n/Veximoji.git",
-        "state": {
-          "branch": "main",
-          "revision": "ec918af2eccca0552c14df0c7a846135a0657dc5",
-          "version": null
-        }
+  "pins" : [
+    {
+      "identity" : "veximoji",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/roz0n/Veximoji.git",
+      "state" : {
+        "branch" : "main",
+        "revision" : "17539dff116d574096d0562a5d1fc99e2d98a4fb"
       }
-    ]
-  },
-  "version": 1
+    }
+  ],
+  "version" : 2
 }

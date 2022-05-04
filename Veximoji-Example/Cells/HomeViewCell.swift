@@ -43,9 +43,10 @@ class HomeViewCell: UITableViewCell {
   let codeLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.backgroundColor = .systemGray5
+    label.backgroundColor = UIColor(named: "AccentColor")?.withAlphaComponent(0.1)
     label.numberOfLines = 1
-    label.font = UIFont.monospacedSystemFont(ofSize: 16, weight: .regular)
+    label.font = UIFont.monospacedSystemFont(ofSize: 12, weight: .semibold)
+    label.textColor = UIColor(named: "AccentColor")
     label.textAlignment = .center
     label.layer.cornerRadius = 4
     label.layer.masksToBounds = true
