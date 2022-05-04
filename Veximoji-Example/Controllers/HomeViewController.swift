@@ -8,12 +8,14 @@
 import UIKit
 import Veximoji
 
+typealias EmojiFlagCategories = Veximoji.FlagCategories
+
 final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   let locationDataManager = LocationDataManager()
   var locationData: [LocationCoords]?
   var searchController: UISearchController?
-  var sections: [String] = Veximoji.FlagCategories.allCases.map { $0.rawValue }
+  var sections: [String] = EmojiFlagCategories.allCases.map { $0.rawValue }.map { $0 }
   
   var selectedSections: [String: Bool]? {
     didSet {
@@ -42,11 +44,11 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
     return view
   }()
   
-  var sectionData: [Veximoji.FlagCategories.RawValue: [String]] = [
-    Veximoji.FlagCategories.country.rawValue: Veximoji.countryCodes,
-    Veximoji.FlagCategories.subdivision.rawValue: Veximoji.subdivisionCodes,
-    Veximoji.FlagCategories.international.rawValue: Veximoji.internationalCodes,
-    Veximoji.FlagCategories.unique.rawValue: Veximoji.uniqueTerms
+  var sectionData: [EmojiFlagCategories: [String]] = [
+    .country: Veximoji.countryCodes,
+    .subdivision: Veximoji.subdivisionCodes,
+    .international: Veximoji.internationalCodes,
+    .unique: Veximoji.uniqueTerms
   ]
   
   // MARK: - View Lifecycle
@@ -100,8 +102,8 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   fileprivate func configureTableView() {
     let backgroundView = UIView()
-    backgroundView.backgroundColor = .systemBackground
     
+    backgroundView.backgroundColor = .systemBackground
     tableView = UITableView(frame: .zero, style: .grouped)
     tableView.register(HomeViewCell.self, forCellReuseIdentifier: HomeViewCell.reuseId)
     tableView.tableHeaderView = searchController!.searchBar
@@ -111,11 +113,11 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   fileprivate func configureTableFooter() {
     let textView = UITextView()
+    
     textView.text = "\(totalFlagCount) Emoji Flags Supported"
     textView.font = UIFont.boldSystemFont(ofSize: 14)
     textView.textAlignment = .center
     textView.translatesAutoresizingMaskIntoConstraints = false
-    
     tableFooter.addSubview(textView)
     
     NSLayoutConstraint.activate([
@@ -130,7 +132,7 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   @objc func presentFilterView() {
     let filterViewController = FilterTableViewController()
-
+    
     filterViewController.navigationItem.title = "Categories"
     navigationController?.pushViewController(filterViewController, animated: true)
     
@@ -159,40 +161,39 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     let key = visibleSections[section]
-    return sectionData[key]!.count
+    let keyCategory = EmojiFlagCategories(rawValue: key)
+    
+    guard let keyCategory = keyCategory else { return 0 }
+    
+    return sectionData[keyCategory]?.count ?? 0
   }
   
   override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewCell.reuseId, for: indexPath) as! HomeViewCell
     let key = visibleSections[indexPath.section]
-    let code = sectionData[key]?[indexPath.row]
-    let location = locationData?.first(where: { $0.isoCode == code })
-    var emoji: String?
+    let cell = tableView.dequeueReusableCell(withIdentifier: HomeViewCell.reuseId, for: indexPath) as! HomeViewCell
     
-    if let code = code {
-      switch key {
-        case Veximoji.FlagCategories.country.rawValue:
-          emoji = Veximoji.country(code: code)
-        case Veximoji.FlagCategories.subdivision.rawValue:
-          emoji = Veximoji.subdivision(code: code)
-        case Veximoji.FlagCategories.international.rawValue:
-          emoji = Veximoji.international(code: code)
-        case Veximoji.FlagCategories.unique.rawValue:
-          emoji = Veximoji.unique(term: Veximoji.UniqueTerms(rawValue: code)!)
-        default:
-          break
-      }
-      
-      if let emoji = emoji {
-        cell.flagData = EmojiFlag(emoji: emoji, code: code, name: Locale.current.localizedString(forRegionCode: code), group: key, location: location)
-        cell.accessoryType = .disclosureIndicator
-        cell.tintColor = UIColor(named: "AccentColor")
-      } else {
-        return cell
-      }
+    guard let keyCategory = EmojiFlagCategories(rawValue: key) else {
+      return cell
     }
     
-    return cell
+    let code = sectionData[keyCategory]?[indexPath.row]
+    
+    
+    if let emoji = code?.flag(), let code = code {
+      cell.accessoryType = .disclosureIndicator
+      cell.tintColor = UIColor(named: "AccentColor")
+      cell.flagData = EmojiFlag(emoji: emoji, code: code,
+                                name: Locale.current.localizedString(forRegionCode: code),
+                                group: key,
+                                location: nil)
+      if let flagLocationData = locationData?.first(where: { $0.isoCode == code }) {
+        cell.flagData?.location = flagLocationData
+      }
+      
+      return cell
+    } else {
+      return cell
+    }
   }
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -201,8 +202,6 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
     if let data = cell.flagData {
       searchController?.isActive = false
       presentDetailView(data: data, cell: cell)
-    } else {
-      return
     }
   }
   
@@ -210,10 +209,10 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   func resetData() {
     sectionData = [
-      Veximoji.FlagCategories.country.rawValue: Veximoji.countryCodes,
-      Veximoji.FlagCategories.subdivision.rawValue: Veximoji.subdivisionCodes,
-      Veximoji.FlagCategories.international.rawValue: Veximoji.internationalCodes,
-      Veximoji.FlagCategories.unique.rawValue: Veximoji.uniqueTerms
+      EmojiFlagCategories.country: Veximoji.countryCodes,
+      EmojiFlagCategories.subdivision: Veximoji.subdivisionCodes,
+      EmojiFlagCategories.international: Veximoji.internationalCodes,
+      EmojiFlagCategories.unique: Veximoji.uniqueTerms
     ]
     
     tableView.reloadData()
@@ -221,22 +220,22 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   func filterResultsData(query: String) {
     sectionData.removeAll()
-    
-    let filteredData = [
-      Veximoji.FlagCategories.country.rawValue: Veximoji.countryCodes.filter { $0.contains(query.uppercased()) },
-      Veximoji.FlagCategories.subdivision.rawValue: Veximoji.subdivisionCodes.filter { $0.contains(query.uppercased()) },
-      Veximoji.FlagCategories.international.rawValue: Veximoji.internationalCodes.filter { $0.contains(query.uppercased()) },
-      Veximoji.FlagCategories.unique.rawValue: Veximoji.uniqueTerms.filter { $0.contains(query.lowercased()) }
+    sectionData = [
+      .country: Veximoji.countryCodes.filter { $0.contains(query.uppercased()) },
+      .subdivision: Veximoji.subdivisionCodes.filter { $0.contains(query.uppercased()) },
+      .international: Veximoji.internationalCodes.filter { $0.contains(query.uppercased()) },
+      .unique: Veximoji.uniqueTerms.filter { $0.contains(query.lowercased()) }
     ]
     
-    sectionData = filteredData
     tableView.reloadData()
   }
   
   // MARK: - UISearchResultsUpdating
   
   func updateSearchResults(for searchController: UISearchController) {
-    guard let query = searchController.searchBar.text else { return }
+    guard let query = searchController.searchBar.text else {
+      return
+    }
     
     guard query != "" else {
       resetData()
