@@ -8,7 +8,14 @@
 import UIKit
 import Veximoji
 
+// TODO: Thesse would be nice additions to the lib
+
 typealias EmojiFlagCategories = Veximoji.FlagCategories
+
+public var EmojiCountryCodes = Veximoji.countryCodes
+public var EmojiSubdivisionCodes = Veximoji.subdivisionCodes
+public var EmojiInternationalCodes = Veximoji.internationalCodes
+public var EmojiFlagUniqueTerms = Veximoji.uniqueTerms
 
 final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
@@ -45,10 +52,10 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   }()
   
   var sectionData: [EmojiFlagCategories: [String]] = [
-    .country: Veximoji.countryCodes,
-    .subdivision: Veximoji.subdivisionCodes,
-    .international: Veximoji.internationalCodes,
-    .unique: Veximoji.uniqueTerms
+    .country: EmojiCountryCodes,
+    .subdivision: EmojiSubdivisionCodes,
+    .international: EmojiInternationalCodes,
+    .unique: EmojiFlagUniqueTerms
   ]
   
   // MARK: - View Lifecycle
@@ -79,8 +86,12 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   fileprivate func configureNavigation() {
     let iconConfiguration = UIImage.SymbolConfiguration(pointSize: 20, weight: .bold)
-    let filterIcon = UIImage(systemName: "line.horizontal.3.decrease.circle.fill", withConfiguration: iconConfiguration)
-    let filterButton = UIBarButtonItem(image: filterIcon, style: .plain, target: self, action: #selector(presentFilterView))
+    let filterIcon = UIImage(systemName: "line.horizontal.3.decrease.circle.fill",
+                             withConfiguration: iconConfiguration)
+    let filterButton = UIBarButtonItem(image: filterIcon,
+                                       style: .plain,
+                                       target: self,
+                                       action: #selector(presentFilterView))
     
     filterButton.tintColor = UIColor(named: "AccentColor")
     navigationItem.rightBarButtonItem = filterButton
@@ -164,7 +175,6 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
     let keyCategory = EmojiFlagCategories(rawValue: key)
     
     guard let keyCategory = keyCategory else { return 0 }
-    
     return sectionData[keyCategory]?.count ?? 0
   }
   
@@ -177,7 +187,6 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
     }
     
     let code = sectionData[keyCategory]?[indexPath.row]
-    
     
     if let emoji = code?.flag(), let code = code {
       cell.accessoryType = .disclosureIndicator
@@ -209,10 +218,10 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   
   func resetData() {
     sectionData = [
-      EmojiFlagCategories.country: Veximoji.countryCodes,
-      EmojiFlagCategories.subdivision: Veximoji.subdivisionCodes,
-      EmojiFlagCategories.international: Veximoji.internationalCodes,
-      EmojiFlagCategories.unique: Veximoji.uniqueTerms
+      .country: EmojiCountryCodes,
+      .subdivision: EmojiSubdivisionCodes,
+      .international: EmojiInternationalCodes,
+      .unique: EmojiFlagUniqueTerms
     ]
     
     tableView.reloadData()
@@ -221,10 +230,10 @@ final class HomeViewController: UITableViewController, UISearchResultsUpdating {
   func filterResultsData(query: String) {
     sectionData.removeAll()
     sectionData = [
-      .country: Veximoji.countryCodes.filter { $0.contains(query.uppercased()) },
-      .subdivision: Veximoji.subdivisionCodes.filter { $0.contains(query.uppercased()) },
-      .international: Veximoji.internationalCodes.filter { $0.contains(query.uppercased()) },
-      .unique: Veximoji.uniqueTerms.filter { $0.contains(query.lowercased()) }
+      .country: EmojiCountryCodes.filter { $0.contains(query.uppercased()) },
+      .subdivision: EmojiSubdivisionCodes.filter { $0.contains(query.uppercased()) },
+      .international: EmojiInternationalCodes.filter { $0.contains(query.uppercased()) },
+      .unique: EmojiFlagUniqueTerms.filter { $0.contains(query.lowercased()) }
     ]
     
     tableView.reloadData()
