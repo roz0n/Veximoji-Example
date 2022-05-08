@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23304BFA2658911C007ED020 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BF92658911C007ED020 /* HomeViewCell.swift */; };
+		23304BFA2658911C007ED020 /* FlagsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BF92658911C007ED020 /* FlagsListCell.swift */; };
 		23304BFE2658CF82007ED020 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BFD2658CF82007ED020 /* FilterTableViewController.swift */; };
 		233545602659A2AC003F246F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335455F2659A2AC003F246F /* DetailViewController.swift */; };
 		233545632659A4CA003F246F /* EmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545622659A4CA003F246F /* EmojiFlag.swift */; };
@@ -21,10 +21,12 @@
 		2376A5E826578A9400E9A128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2376A5E626578A9400E9A128 /* LaunchScreen.storyboard */; };
 		2376A5F026578EB700E9A128 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5EF26578EB700E9A128 /* HomeViewController.swift */; };
 		2376A5F32657934E00E9A128 /* Veximoji in Frameworks */ = {isa = PBXBuildFile; productRef = 2376A5F22657934E00E9A128 /* Veximoji */; };
+		23EC01D128276EB4007FCF12 /* FlagsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */; };
+		23EC01D328276F08007FCF12 /* FlagsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23304BF92658911C007ED020 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
+		23304BF92658911C007ED020 /* FlagsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListCell.swift; sourceTree = "<group>"; };
 		23304BFD2658CF82007ED020 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
 		2335455F2659A2AC003F246F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		233545622659A4CA003F246F /* EmojiFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFlag.swift; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		2376A5E726578A9400E9A128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2376A5E926578A9400E9A128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2376A5EF26578EB700E9A128 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListViewController.swift; sourceTree = "<group>"; };
+		23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				2376A5EF26578EB700E9A128 /* HomeViewController.swift */,
 				23304BFD2658CF82007ED020 /* FilterTableViewController.swift */,
 				2335455F2659A2AC003F246F /* DetailViewController.swift */,
+				23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */,
+				23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -66,7 +72,7 @@
 		23304BFC2658CF57007ED020 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				23304BF92658911C007ED020 /* HomeViewCell.swift */,
+				23304BF92658911C007ED020 /* FlagsListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -217,10 +223,12 @@
 				23354569265A3748003F246F /* Location.swift in Sources */,
 				233545652659C0A4003F246F /* UIView+Ext.swift in Sources */,
 				2376A5DC26578A9000E9A128 /* AppDelegate.swift in Sources */,
-				23304BFA2658911C007ED020 /* HomeViewCell.swift in Sources */,
+				23304BFA2658911C007ED020 /* FlagsListCell.swift in Sources */,
+				23EC01D128276EB4007FCF12 /* FlagsListViewController.swift in Sources */,
 				2335456E265AD3BA003F246F /* LocationDataManager.swift in Sources */,
 				2376A5DE26578A9000E9A128 /* SceneDelegate.swift in Sources */,
 				233545602659A2AC003F246F /* DetailViewController.swift in Sources */,
+				23EC01D328276F08007FCF12 /* FlagsListDataSource.swift in Sources */,
 				23304BFE2658CF82007ED020 /* FilterTableViewController.swift in Sources */,
 				233545632659A4CA003F246F /* EmojiFlag.swift in Sources */,
 				2376A5F026578EB700E9A128 /* HomeViewController.swift in Sources */,
