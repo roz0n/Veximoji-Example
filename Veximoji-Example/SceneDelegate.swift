@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     let filterDataSource = FlagsListFilterDataSource(categories: EmojiFlagCategory.allCases)
     let filterViewController = FlagsListFilterViewController(with: filterDataSource)
   
-    let flagsListDataSource = FlagsListDataSource(categories: EmojiFlagCategory.allCases)
+    let flagsListDataSource = FlagsListDataSource(sections: EmojiFlagCategory.allCases)
     let flagsListViewController = FlagsListViewController(with: flagsListDataSource, filterViewController: filterViewController)
     
     let navigationController = UINavigationController(rootViewController: flagsListViewController)

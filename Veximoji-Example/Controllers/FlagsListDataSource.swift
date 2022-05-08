@@ -19,7 +19,15 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: -
   
-  private var categories: [EmojiFlagCategory]
+  private var allCategories: [EmojiFlagCategory]
+  private var visibleCategories: [EmojiFlagCategory]
+  
+  public var hiddenCategories = Set<EmojiFlagCategory>() {
+    didSet {
+      self.visibleCategories = allCategories.filter { !hiddenCategories.contains($0) }
+    }
+  }
+  
   private var flagData: [EmojiFlagCategory: [String]] = [
     .country: EmojiCountryCodes,
     .subdivision: EmojiSubdivisionCodes,
@@ -29,30 +37,32 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: - Initializers
   
-  init(categories: [EmojiFlagCategory]) {
-    self.categories = categories
+  init(sections: [EmojiFlagCategory]) {
+    self.allCategories = sections
+    self.visibleCategories = allCategories
+    
     super.init()
   }
   
   // MARK: - UITableViewDataSource
   
   func numberOfSections(in tableView: UITableView) -> Int {
-    return categories.count
+    return visibleCategories.count
   }
   
   func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-    return categories[section].rawValue.capitalized
+    return visibleCategories[section].rawValue.capitalized
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    let category = EmojiFlagCategory.allCases[section]
+    let category = visibleCategories[section]
     return flagData[category]?.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListCell.reuseIdentifier,
                                              for: indexPath) as! FlagsListCell
-    let category = EmojiFlagCategory.allCases[indexPath.section]
+    let category = visibleCategories[indexPath.section]
     let code = flagData[category]?[indexPath.row]
     
     if let emoji = code?.flag(), let code = code {

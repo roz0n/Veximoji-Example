@@ -13,7 +13,7 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
   
   private var dataSource: FlagsListDataSource
   private var filterViewController: FlagsListFilterViewController
-  private var hiddenCategories = Set<EmojiFlagCategory>()
+//  private var hiddenCategories = Set<EmojiFlagCategory>()
   
   // MARK: - Initializers
   
@@ -36,6 +36,11 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
     filterViewController.delegate = self
     configureTableView()
     configureNavigation()
+  }
+  
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(animated)
+    tableView.reloadData()
   }
   
   // MARK: - Configuration
@@ -74,13 +79,13 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
   // MARK: - FlagsListFilterDelegate
   
   func didTapCategory(_ category: EmojiFlagCategory) {
-    if hiddenCategories.contains(category) {
-      hiddenCategories.remove(category)
+    if dataSource.hiddenCategories.contains(category) {
+      dataSource.hiddenCategories.remove(category)
     } else {
-      hiddenCategories.insert(category)
+      dataSource.hiddenCategories.insert(category)
     }
     
-    filterViewController.updateHiddenCategories(hiddenCategories)
+    filterViewController.updateHiddenCategories(dataSource.hiddenCategories)
   }
   
 }
