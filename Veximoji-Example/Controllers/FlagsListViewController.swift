@@ -7,16 +7,20 @@
 
 import UIKit
 
-final class FlagsListViewController: UITableViewController {
+final class FlagsListViewController: UITableViewController, FlagsListFilterDelegate {
   
   // MARK: -
   
   private var dataSource: FlagsListDataSource
+  private var filterViewController: FlagsListFilterViewController
+  private var hiddenCategories = Set<EmojiFlagCategory>()
   
   // MARK: - Initializers
   
-  init(with dataSource: FlagsListDataSource) {
+  init(with dataSource: FlagsListDataSource, filterViewController: FlagsListFilterViewController) {
     self.dataSource = dataSource
+    self.filterViewController = filterViewController
+    
     super.init(style: .plain)
   }
   
@@ -29,6 +33,7 @@ final class FlagsListViewController: UITableViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    filterViewController.delegate = self
     configureTableView()
     configureNavigation()
   }
@@ -58,15 +63,24 @@ final class FlagsListViewController: UITableViewController {
   // MARK: - Selectors
   
   @objc func presentFilterViewController() {
-    let dataSource = FlagsListFilterDataSource(categories: EmojiFlagCategories.allCases)
-    let viewController = FlagsListFilterViewController(with: dataSource)
-    
-    viewController.navigationItem.title = "Categories"
-    navigationController?.pushViewController(viewController, animated: true)
+    filterViewController.navigationItem.title = "Categories"
+    navigationController?.pushViewController(filterViewController, animated: true)
     
     if #available(iOS 10.0, *) {
       UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
     }
+  }
+  
+  // MARK: - FlagsListFilterDelegate
+  
+  func didTapCategory(_ category: EmojiFlagCategory) {
+    if hiddenCategories.contains(category) {
+      hiddenCategories.remove(category)
+    } else {
+      hiddenCategories.insert(category)
+    }
+    
+    filterViewController.updateHiddenCategories(hiddenCategories)
   }
   
 }

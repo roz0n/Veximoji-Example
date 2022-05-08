@@ -8,7 +8,7 @@
 import UIKit
 import Veximoji
 
-typealias EmojiFlagCategories = Veximoji.FlagCategories
+typealias EmojiFlagCategory = Veximoji.FlagCategories
 
 public var EmojiCountryCodes = Veximoji.countryCodes
 public var EmojiSubdivisionCodes = Veximoji.subdivisionCodes
@@ -19,8 +19,8 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: -
   
-  private var categories: [EmojiFlagCategories]
-  private var flagData: [EmojiFlagCategories: [String]] = [
+  private var categories: [EmojiFlagCategory]
+  private var flagData: [EmojiFlagCategory: [String]] = [
     .country: EmojiCountryCodes,
     .subdivision: EmojiSubdivisionCodes,
     .international: EmojiInternationalCodes,
@@ -29,7 +29,7 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: - Initializers
   
-  init(categories: [EmojiFlagCategories]) {
+  init(categories: [EmojiFlagCategory]) {
     self.categories = categories
     super.init()
   }
@@ -45,14 +45,14 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    let category = EmojiFlagCategories.allCases[section]
+    let category = EmojiFlagCategory.allCases[section]
     return flagData[category]?.count ?? 0
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListCell.reuseIdentifier,
                                              for: indexPath) as! FlagsListCell
-    let category = EmojiFlagCategories.allCases[indexPath.section]
+    let category = EmojiFlagCategory.allCases[indexPath.section]
     let code = flagData[category]?[indexPath.row]
     
     if let emoji = code?.flag(), let code = code {

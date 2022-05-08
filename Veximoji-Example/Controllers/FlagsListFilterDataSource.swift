@@ -11,13 +11,20 @@ final class FlagsListFilterDataSource: NSObject, UITableViewDataSource {
   
   // MARK: -
   
-  private var categories: [EmojiFlagCategories]
+  private var categoryData: [EmojiFlagCategory]
+  public var hiddenCategories: Set<EmojiFlagCategory>?
   
   // MARK: - Initializers
   
-  init(categories: [EmojiFlagCategories]) {
-    self.categories = categories
+  init(categories: [EmojiFlagCategory]) {
+    self.categoryData = categories
     super.init()
+  }
+  
+  // MARK: - Helpers
+  
+  public func updateHiddenCategories(_ categories: Set<EmojiFlagCategory>) {
+    self.hiddenCategories = categories
   }
   
   // MARK: - UITableViewDataSource
@@ -27,15 +34,22 @@ final class FlagsListFilterDataSource: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return categories.count
+    return categoryData.count
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    let category = categoryData[indexPath.row]
     let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListFilterViewController.reuseIdentifier,
                                              for: indexPath)
-    let category = categories[indexPath.row]
     
     cell.textLabel?.text = category.rawValue.capitalized
+    
+    if let hiddenCategories = hiddenCategories {
+      cell.accessoryType = hiddenCategories.contains(category) ? .none : .checkmark
+    } else {
+      cell.accessoryType = .checkmark
+    }
+    
     return cell
   }
   

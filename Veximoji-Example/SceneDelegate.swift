@@ -19,12 +19,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let scene = (scene as? UIWindowScene) else { return }
     
-    let flagsListDataSource =  FlagsListDataSource(categories: EmojiFlagCategories.allCases)
-    let rootViewController = FlagsListViewController(with: flagsListDataSource)
+    let filterDataSource = FlagsListFilterDataSource(categories: EmojiFlagCategory.allCases)
+    let filterViewController = FlagsListFilterViewController(with: filterDataSource)
+  
+    let flagsListDataSource = FlagsListDataSource(categories: EmojiFlagCategory.allCases)
+    let flagsListViewController = FlagsListViewController(with: flagsListDataSource, filterViewController: filterViewController)
     
-    let navigationController = UINavigationController(rootViewController: rootViewController)
+    let navigationController = UINavigationController(rootViewController: flagsListViewController)
     
-    rootViewController.navigationItem.title = "Veximoji"
+    flagsListViewController.navigationItem.title = "Veximoji"
     navigationController.navigationBar.prefersLargeTitles = true
     navigationController.navigationBar.tintColor = UIColor(named: "AccentColor")
         
