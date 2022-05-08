@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let scene = (scene as? UIWindowScene) else { return }
     
-    let flagsListDataSource =  FlagsListDataSource(categories: Veximoji.FlagCategories.allCases)
-    let rootViewController = FlagsListViewController(dataSource: flagsListDataSource)
+    let flagsListDataSource =  FlagsListDataSource(categories: EmojiFlagCategories.allCases)
+    let rootViewController = FlagsListViewController(with: flagsListDataSource)
     
     let navigationController = UINavigationController(rootViewController: rootViewController)
     

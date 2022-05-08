@@ -15,7 +15,7 @@ public var EmojiSubdivisionCodes = Veximoji.subdivisionCodes
 public var EmojiInternationalCodes = Veximoji.internationalCodes
 public var EmojiFlagUniqueTerms = Veximoji.uniqueTerms
 
-class FlagsListDataSource: NSObject, UITableViewDataSource {
+final class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: -
   
@@ -29,7 +29,7 @@ class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: - Initializers
   
-  init(categories: [Veximoji.FlagCategories]) {
+  init(categories: [EmojiFlagCategories]) {
     self.categories = categories
     super.init()
   }
@@ -50,7 +50,8 @@ class FlagsListDataSource: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListCell.reuseIdentifier, for: indexPath) as! FlagsListCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListCell.reuseIdentifier,
+                                             for: indexPath) as! FlagsListCell
     let category = EmojiFlagCategories.allCases[indexPath.section]
     let code = flagData[category]?[indexPath.row]
     
