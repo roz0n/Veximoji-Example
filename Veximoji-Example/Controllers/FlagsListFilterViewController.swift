@@ -16,12 +16,13 @@ final class FlagsListFilterViewController: UITableViewController {
   // MARK: -
   
   static let reuseIdentifier = "FlagsListFilterCell"
+  
   private var dataSource: FlagsListFilterDataSource
   public var delegate: FlagsListFilterDelegate?
   
   // MARK: - Initializers
   
-  init(with dataSource: FlagsListFilterDataSource) {
+  init(dataSource: FlagsListFilterDataSource) {
     self.dataSource = dataSource
     super.init(style: .grouped)
   }

@@ -13,7 +13,6 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
   
   private var dataSource: FlagsListDataSource
   private var filterViewController: FlagsListFilterViewController
-//  private var hiddenCategories = Set<EmojiFlagCategory>()
   
   // MARK: - Initializers
   

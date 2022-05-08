@@ -37,6 +37,10 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: - Initializers
   
+  convenience override init() {
+    self.init(sections: EmojiFlagCategory.allCases)
+  }
+  
   init(sections: [EmojiFlagCategory]) {
     self.allCategories = sections
     self.visibleCategories = allCategories
