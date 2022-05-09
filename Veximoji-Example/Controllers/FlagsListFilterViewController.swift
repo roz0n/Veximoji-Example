@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Veximoji
 
 protocol FlagsListFilterDelegate {
   func didTapCategory(_ category: EmojiFlagCategory)

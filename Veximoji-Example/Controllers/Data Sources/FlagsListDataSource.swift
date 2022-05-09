@@ -8,13 +8,6 @@
 import UIKit
 import Veximoji
 
-typealias EmojiFlagCategory = Veximoji.FlagCategories
-
-public var EmojiCountryCodes = Veximoji.countryCodes
-public var EmojiSubdivisionCodes = Veximoji.subdivisionCodes
-public var EmojiInternationalCodes = Veximoji.internationalCodes
-public var EmojiFlagUniqueTerms = Veximoji.uniqueTerms
-
 final class FlagsListDataSource: NSObject, UITableViewDataSource {
   
   // MARK: -
@@ -29,9 +22,9 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   }
   
   private var flagData: [EmojiFlagCategory: [String]] = [
-    .country: EmojiCountryCodes,
-    .subdivision: EmojiSubdivisionCodes,
-    .international: EmojiInternationalCodes,
+    .country: EmojiFlagCountryCodes,
+    .subdivision: EmojiFlagSubdivisionCodes,
+    .international: EmojiFlagInternationalCodes,
     .unique: EmojiFlagUniqueTerms
   ]
   

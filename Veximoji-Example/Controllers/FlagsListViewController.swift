@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Veximoji
 
 final class FlagsListViewController: UITableViewController, FlagsListFilterDelegate {
   

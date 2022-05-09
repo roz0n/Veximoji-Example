@@ -129,7 +129,6 @@
 		2376A5DA26578A9000E9A128 /* Veximoji-Example */ = {
 			isa = PBXGroup;
 			children = (
-				23EC01D728289D22007FCF12 /* Views */,
 				2335456C265AD3A4003F246F /* Managers */,
 				23354567265A372E003F246F /* Data */,
 				233545662659C0A7003F246F /* Extensions */,
@@ -151,13 +150,6 @@
 				23EC01D42827869D007FCF12 /* FlagsListFilterDataSource.swift */,
 			);
 			path = "Data Sources";
-			sourceTree = "<group>";
-		};
-		23EC01D728289D22007FCF12 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

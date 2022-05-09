@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Veximoji
 
 final class FlagsListFilterDataSource: NSObject, UITableViewDataSource {
   
