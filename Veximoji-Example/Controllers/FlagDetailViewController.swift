@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  FlagDetailViewController.swift
 //  Veximoji Example
 //
 //  Created by Arnaldo Rozon on 5/22/21.
@@ -9,7 +9,9 @@ import UIKit
 import MapKit
 import Veximoji
 
-class DetailViewController: UIViewController, MKMapViewDelegate {
+class FlagDetailViewController: UIViewController, MKMapViewDelegate {
+  
+  // MARK: -
   
   var flagData: EmojiFlag? {
     didSet {

@@ -88,3 +88,19 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
   }
   
 }
+
+// MARK: - UITableViewDelegate
+
+extension FlagsListViewController {
+  
+  override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    let cell = tableView.cellForRow(at: indexPath) as! FlagsListCell
+    
+    guard let data = cell.flagData else {
+      return
+    }
+    
+    navigationController?.pushViewController(FlagDetailViewController(flagData: data), animated: true)
+  }
+  
+}
