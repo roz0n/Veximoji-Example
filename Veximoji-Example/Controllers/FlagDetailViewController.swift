@@ -254,7 +254,7 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
     let borderView = UIView()
     let yPadding: CGFloat = 8
     
-    borderView.addBorder(borders: [.Bottom],
+    borderView.addBorder(borders: [.bottom],
                          color: color, width: width)
     borderView.addSubview(view)
     
