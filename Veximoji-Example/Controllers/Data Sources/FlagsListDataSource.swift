@@ -8,12 +8,14 @@
 import UIKit
 import Veximoji
 
-final class FlagsListDataSource: NSObject, UITableViewDataSource {
+final class FlagsListDataSource: NSObject, UITableViewDataSource, VXGeoLocationManagerDelegate {
   
   // MARK: -
   
   private var allCategories: [EmojiFlagCategory]
   private var visibleCategories: [EmojiFlagCategory]
+  private var geoLocationManager: VXGeoLocationManager
+  private var isoCodeCoords: [VXGeoLocationData]?
   
   public var hiddenCategories = Set<EmojiFlagCategory>() {
     didSet {
@@ -31,14 +33,23 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   // MARK: - Initializers
   
   convenience override init() {
-    self.init(sections: EmojiFlagCategory.allCases)
+    self.init(sections: EmojiFlagCategory.allCases, locationManager: VXGeoLocationManager())
   }
   
-  init(sections: [EmojiFlagCategory]) {
+  init(sections: [EmojiFlagCategory], locationManager: VXGeoLocationManager) {
     self.allCategories = sections
     self.visibleCategories = allCategories
+    self.geoLocationManager = locationManager
     
     super.init()
+    configureGeoLocationManager()
+  }
+  
+  // MARK: - Configuration
+  
+  private func configureGeoLocationManager() {
+    geoLocationManager.delegate = self
+    geoLocationManager.decodeIsoCodeLocations()
   }
   
   // MARK: - UITableViewDataSource
@@ -57,24 +68,38 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource {
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListCell.reuseIdentifier,
-                                             for: indexPath) as! FlagsListCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListCell.reuseIdentifier, for: indexPath) as! FlagsListCell
     let category = visibleCategories[indexPath.section]
     let code = flagData[category]?[indexPath.row]
     
     if let emoji = code?.flag(), let code = code {
       let name = Locale.current.localizedString(forRegionCode: code)
+      let coords = isoCodeCoords?.first(where: { $0.isoCode == code })
       
       cell.accessoryType = .disclosureIndicator
       cell.tintColor = UIColor(named: "AccentColor")
-      cell.flagData = EmojiFlag(emoji: emoji,
+      cell.flagData = VXEmojiFlag(emoji: emoji,
                                 code: code,
                                 name: name,
                                 group: category.rawValue,
-                                location: nil)
+                                coordinates: coords)
     }
     
     return cell
+  }
+  
+}
+
+// MARK: - VXGeoLocationManagerDelegate
+
+extension FlagsListDataSource {
+  
+  func decodeSuccess(coords: [VXGeoLocationData]) {
+    isoCodeCoords = coords
+  }
+  
+  func decodeError(error: Error?, message: String?) {
+    fatalError(message ?? error?.localizedDescription ?? "Unable to decode ISO code coordinates")
   }
   
 }

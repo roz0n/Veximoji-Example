@@ -7,6 +7,7 @@
 
 import UIKit
 import Veximoji
+import MapKit
 
 final class FlagsListViewController: UITableViewController, FlagsListFilterDelegate {
   
@@ -97,11 +98,14 @@ extension FlagsListViewController {
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
     let cell = tableView.cellForRow(at: indexPath) as! FlagsListCell
     
-    guard let data = cell.flagData else {
+    if let data = cell.flagData {
+      let map = FlagDetailMapView()
+      let detailViewController = FlagDetailViewController(flag: data, map: map)
+      
+      navigationController?.pushViewController(detailViewController, animated: true)
+    } else {
       return
     }
-    
-    navigationController?.pushViewController(FlagDetailViewController(flagData: data), animated: true)
   }
   
 }

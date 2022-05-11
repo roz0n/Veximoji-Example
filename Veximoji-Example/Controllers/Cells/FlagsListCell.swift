@@ -11,7 +11,7 @@ class FlagsListCell: UITableViewCell {
   
   static let reuseIdentifier = "FlagsListCell"
   
-  var flagData: EmojiFlag? {
+  var flagData: VXEmojiFlag? {
     didSet {
       guard let data = flagData else { return }
       

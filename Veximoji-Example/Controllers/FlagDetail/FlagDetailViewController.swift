@@ -13,68 +13,21 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
   
   // MARK: -
   
-  var flagData: EmojiFlag? {
+  var flagData: VXEmojiFlag? {
     didSet {
       emojiDataLabel.text = flagData?.emoji
       codeDataLabel.text = flagData?.code
       nameDataLabel.text = flagData?.name ?? codeDataLabel.text?.capitalized
       groupDataLabel.text = flagData?.group?.capitalized
       
-      if let locationData = flagData?.location {
-        configureMap(coords: locationData)
+      if let locationData = flagData?.coordinates {
+        mapView.configureMap(coords: locationData)
       }
     }
   }
   
-  // MARK: - Map
-  
-  var locationMarker = MKPointAnnotation()
-  
-  var hasLocation: Bool {
-    get {
-      if let flagData = flagData {
-        return flagData.group == Veximoji.FlagCategories.country.rawValue || flagData.group == Veximoji.FlagCategories.subdivision.rawValue
-      } else {
-        return false
-      }
-    }
-  }
-  
-  let mapView: MKMapView = {
-    let map = MKMapView(frame: .zero)
-    map.translatesAutoresizingMaskIntoConstraints = false
-    map.mapType = MKMapType.standard
-    map.isZoomEnabled = true
-    map.isScrollEnabled = true
-    return map
-  }()
-  
-  fileprivate func configureMap(coords: LocationCoords) {
-    let coords = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
-    let span = MKCoordinateSpan(latitudeDelta: 10.0, longitudeDelta: 10.0)
-    let region = MKCoordinateRegion(center: coords, span: span)
-    
-    // Configure Map
-    mapView.setRegion(region, animated: true)
-    mapView.centerCoordinate = CLLocationCoordinate2D(latitude: coords.latitude, longitude: coords.longitude)
-    
-    // Configure Marker
-    locationMarker.coordinate = coords
-    mapView.addAnnotation(locationMarker)
-  }
-  
-  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-    let reuseId = "LocationMarker"
-    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
-    
-    if annotationView == nil {
-      annotationView = MKPinAnnotationView(annotation: locationMarker, reuseIdentifier: reuseId)
-      annotationView?.animatesDrop = true
-      annotationView?.pinTintColor = UIColor(named: "AccentColor")
-    }
-    
-    return annotationView
-  }
+  var mapMarker: MKPointAnnotation
+  var mapView: FlagDetailMapView
   
   // MARK: - Containers
   
@@ -140,7 +93,7 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
   let groupHeaderLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.text = "Group".uppercased()
+    label.text = "Category".uppercased()
     label.font = UIFont.systemFont(ofSize: 11, weight: .bold)
     label.textColor = .systemGray2
     return label
@@ -209,11 +162,15 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
   
   // MARK: - Initializers
   
-  init(flagData: EmojiFlag) {
+  init(flag: VXEmojiFlag, map: FlagDetailMapView, marker: MKPointAnnotation = MKPointAnnotation()) {
+    self.flagData = flag
+    self.mapView = map
+    self.mapMarker = marker
+    
     super.init(nibName: nil, bundle: nil)
     
     defer {
-      self.flagData = flagData
+      self.flagData = flag
     }
   }
   
@@ -226,22 +183,32 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    view.backgroundColor = .systemBackground
-    mapView.delegate = self
-    
+    configureViewController()
+    configureMapView()
     configureButtonGestures()
+    
     layoutScrollContainer()
     layoutFlagContainer()
     layoutDetailContainer()
     layoutFieldLabels()
-    layoutButtonsContainer()
     
-    if hasLocation {
+    if flagData?.coordinates != nil {
       layoutMapContainer()
     }
+    
+    layoutButtonsContainer()
   }
   
   // MARK: - Configurations
+  
+  fileprivate func configureViewController() {
+    navigationItem.largeTitleDisplayMode = .never
+    view.backgroundColor = .systemBackground
+  }
+  
+  fileprivate func configureMapView() {
+    mapView.delegate = self
+  }
   
   fileprivate func configureButtonGestures() {
     copyCodeButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(copyToClipboard(sender:))))
@@ -303,9 +270,28 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
     }
   }
   
-  // MARK: - Layout
+  // MARK: - MKMapViewDelegate
   
-  fileprivate func layoutScrollContainer() {
+  func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    let reuseId = "LocationMarker"
+    var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: reuseId) as? MKPinAnnotationView
+    
+    if annotationView == nil {
+      annotationView = MKPinAnnotationView(annotation: mapMarker, reuseIdentifier: reuseId)
+      annotationView?.animatesDrop = true
+      annotationView?.pinTintColor = UIColor(named: "AccentColor")
+    }
+    
+    return annotationView
+  }
+  
+}
+
+// MARK: - Layout
+
+fileprivate extension FlagDetailViewController {
+  
+  func layoutScrollContainer() {
     view.addSubview(scrollContainer)
     
     NSLayoutConstraint.activate([
@@ -316,7 +302,7 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
     ])
   }
   
-  fileprivate func layoutFlagContainer() {
+  func layoutFlagContainer() {
     let yPadding: CGFloat = 24
     let xPadding: CGFloat = 20
     let oneThird: CGFloat = 0.33
@@ -336,7 +322,7 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
     ])
   }
   
-  fileprivate func layoutDetailContainer() {
+  func layoutDetailContainer() {
     let yPadding: CGFloat = 24
     let xPadding: CGFloat = 20
     
@@ -349,7 +335,7 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
     ])
   }
   
-  fileprivate func layoutFieldLabels() {
+  func layoutFieldLabels() {
     let codeField = wrapInFieldContainer(views: [codeHeaderLabel, wrapInBorderView(view: codeDataLabel, width: 2.5, color: UIColor(named: "AccentColor")!)])
     let nameField = wrapInFieldContainer(views: [nameHeaderLabel, wrapInBorderView(view: nameDataLabel)])
     let groupField = wrapInFieldContainer(views: [groupHeaderLabel, wrapInBorderView(view: groupDataLabel)])
@@ -359,26 +345,7 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
     detailsContainer.addArrangedSubview(groupField)
   }
   
-  fileprivate func layoutButtonsContainer() {
-    let yPadding: CGFloat = 24
-    let xPadding: CGFloat = 20
-    
-    buttonsContainer.addArrangedSubview(copyCodeButton)
-    buttonsContainer.addArrangedSubview(copyEmojiButton)
-    scrollContainer.addSubview(buttonsContainer)
-    
-    NSLayoutConstraint.activate([
-      buttonsContainer.topAnchor.constraint(equalTo: detailsContainer.bottomAnchor, constant: yPadding),
-      buttonsContainer.leadingAnchor.constraint(equalTo: scrollContainer.leadingAnchor, constant: xPadding),
-      buttonsContainer.trailingAnchor.constraint(equalTo: scrollContainer.trailingAnchor, constant: -xPadding)
-    ])
-    
-    if !hasLocation {
-      buttonsContainer.bottomAnchor.constraint(equalTo: scrollContainer.bottomAnchor, constant: -yPadding).isActive = true
-    }
-  }
-  
-  fileprivate func layoutMapContainer() {
+  func layoutMapContainer() {
     let yPadding: CGFloat = 24
     let xPadding: CGFloat = 20
     let mapHeight: CGFloat = 300
@@ -388,10 +355,9 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
     
     NSLayoutConstraint.activate([
       mapViewContainer.heightAnchor.constraint(equalToConstant: mapHeight),
-      mapViewContainer.topAnchor.constraint(equalTo: buttonsContainer.bottomAnchor, constant: yPadding),
+      mapViewContainer.topAnchor.constraint(equalTo: detailsContainer.bottomAnchor, constant: yPadding),
       mapViewContainer.leadingAnchor.constraint(equalTo: scrollContainer.leadingAnchor, constant: xPadding),
       mapViewContainer.trailingAnchor.constraint(equalTo: scrollContainer.trailingAnchor, constant: -xPadding),
-      mapViewContainer.bottomAnchor.constraint(equalTo: scrollContainer.bottomAnchor, constant: -yPadding),
       
       mapView.topAnchor.constraint(equalTo: mapViewContainer.topAnchor),
       mapView.leadingAnchor.constraint(equalTo: mapViewContainer.leadingAnchor),
@@ -399,5 +365,26 @@ class FlagDetailViewController: UIViewController, MKMapViewDelegate {
       mapView.bottomAnchor.constraint(equalTo: mapViewContainer.bottomAnchor)
     ])
   }
+  
+  func layoutButtonsContainer() {
+    let yPadding: CGFloat = 24
+    let xPadding: CGFloat = 20
+    
+    let previousArrangedSubview: UIView = {
+      return flagData?.coordinates != nil ? mapViewContainer : detailsContainer
+    }()
+    
+    buttonsContainer.addArrangedSubview(copyCodeButton)
+    buttonsContainer.addArrangedSubview(copyEmojiButton)
+    scrollContainer.addSubview(buttonsContainer)
+    
+    NSLayoutConstraint.activate([
+      buttonsContainer.topAnchor.constraint(equalTo: previousArrangedSubview.bottomAnchor, constant: yPadding),
+      buttonsContainer.leadingAnchor.constraint(equalTo: scrollContainer.leadingAnchor, constant: xPadding),
+      buttonsContainer.trailingAnchor.constraint(equalTo: scrollContainer.trailingAnchor, constant: -xPadding),
+      buttonsContainer.bottomAnchor.constraint(equalTo: scrollContainer.bottomAnchor, constant: -yPadding)
+    ])
+  }
+  
   
 }
