@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23304BFA2658911C007ED020 /* FlagsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BF92658911C007ED020 /* FlagsListCell.swift */; };
-		23304BFE2658CF82007ED020 /* FlagsListFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BFD2658CF82007ED020 /* FlagsListFilterViewController.swift */; };
+		23304BFA2658911C007ED020 /* FlagListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BF92658911C007ED020 /* FlagListCell.swift */; };
+		23304BFE2658CF82007ED020 /* FlagListFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BFD2658CF82007ED020 /* FlagListFilterViewController.swift */; };
 		233545602659A2AC003F246F /* FlagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335455F2659A2AC003F246F /* FlagDetailViewController.swift */; };
 		233545632659A4CA003F246F /* VXEmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545622659A4CA003F246F /* VXEmojiFlag.swift */; };
 		233545652659C0A4003F246F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545642659C0A4003F246F /* UIView+Ext.swift */; };
@@ -21,14 +21,14 @@
 		2376A5E826578A9400E9A128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2376A5E626578A9400E9A128 /* LaunchScreen.storyboard */; };
 		239F69BE282B17EE00E198D2 /* Veximoji in Frameworks */ = {isa = PBXBuildFile; productRef = 239F69BD282B17EE00E198D2 /* Veximoji */; };
 		239F69C1282B803E00E198D2 /* FlagDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F69C0282B803E00E198D2 /* FlagDetailMapView.swift */; };
-		23EC01D128276EB4007FCF12 /* FlagsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */; };
-		23EC01D328276F08007FCF12 /* FlagsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */; };
-		23EC01D52827869D007FCF12 /* FlagsListFilterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D42827869D007FCF12 /* FlagsListFilterDataSource.swift */; };
+		23EC01D128276EB4007FCF12 /* FlagListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D028276EB4007FCF12 /* FlagListViewController.swift */; };
+		23EC01D328276F08007FCF12 /* FlagListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D228276F08007FCF12 /* FlagListDataSource.swift */; };
+		23EC01D52827869D007FCF12 /* FlagListFilterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D42827869D007FCF12 /* FlagListFilterDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23304BF92658911C007ED020 /* FlagsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListCell.swift; sourceTree = "<group>"; };
-		23304BFD2658CF82007ED020 /* FlagsListFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListFilterViewController.swift; sourceTree = "<group>"; };
+		23304BF92658911C007ED020 /* FlagListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagListCell.swift; sourceTree = "<group>"; };
+		23304BFD2658CF82007ED020 /* FlagListFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagListFilterViewController.swift; sourceTree = "<group>"; };
 		2335455F2659A2AC003F246F /* FlagDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailViewController.swift; sourceTree = "<group>"; };
 		233545622659A4CA003F246F /* VXEmojiFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXEmojiFlag.swift; sourceTree = "<group>"; };
 		233545642659C0A4003F246F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
@@ -42,9 +42,9 @@
 		2376A5E726578A9400E9A128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2376A5E926578A9400E9A128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		239F69C0282B803E00E198D2 /* FlagDetailMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailMapView.swift; sourceTree = "<group>"; };
-		23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListViewController.swift; sourceTree = "<group>"; };
-		23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListDataSource.swift; sourceTree = "<group>"; };
-		23EC01D42827869D007FCF12 /* FlagsListFilterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListFilterDataSource.swift; sourceTree = "<group>"; };
+		23EC01D028276EB4007FCF12 /* FlagListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagListViewController.swift; sourceTree = "<group>"; };
+		23EC01D228276F08007FCF12 /* FlagListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagListDataSource.swift; sourceTree = "<group>"; };
+		23EC01D42827869D007FCF12 /* FlagListFilterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagListFilterDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,22 +59,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		23304BFB2658CF44007ED020 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				239F69BF282B7CEF00E198D2 /* FlagDetail */,
-				23304BFC2658CF57007ED020 /* Cells */,
-				23EC01D62827C407007FCF12 /* Data Sources */,
-				23304BFD2658CF82007ED020 /* FlagsListFilterViewController.swift */,
-				23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		23304BFC2658CF57007ED020 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				23304BF92658911C007ED020 /* FlagsListCell.swift */,
+				23304BF92658911C007ED020 /* FlagListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -131,11 +119,12 @@
 		2376A5DA26578A9000E9A128 /* Veximoji-Example */ = {
 			isa = PBXGroup;
 			children = (
+				239F69C4282B945100E198D2 /* FlagList */,
+				239F69BF282B7CEF00E198D2 /* FlagDetail */,
 				2335456C265AD3A4003F246F /* Managers */,
 				23354567265A372E003F246F /* Data */,
 				233545662659C0A7003F246F /* Extensions */,
 				233545612659A4B6003F246F /* Models */,
-				23304BFB2658CF44007ED020 /* Controllers */,
 				2376A5DB26578A9000E9A128 /* AppDelegate.swift */,
 				2376A5DD26578A9000E9A128 /* SceneDelegate.swift */,
 				2376A5E426578A9400E9A128 /* Assets.xcassets */,
@@ -154,11 +143,22 @@
 			path = FlagDetail;
 			sourceTree = "<group>";
 		};
+		239F69C4282B945100E198D2 /* FlagList */ = {
+			isa = PBXGroup;
+			children = (
+				23304BFC2658CF57007ED020 /* Cells */,
+				23EC01D62827C407007FCF12 /* Data Sources */,
+				23EC01D028276EB4007FCF12 /* FlagListViewController.swift */,
+				23304BFD2658CF82007ED020 /* FlagListFilterViewController.swift */,
+			);
+			path = FlagList;
+			sourceTree = "<group>";
+		};
 		23EC01D62827C407007FCF12 /* Data Sources */ = {
 			isa = PBXGroup;
 			children = (
-				23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */,
-				23EC01D42827869D007FCF12 /* FlagsListFilterDataSource.swift */,
+				23EC01D228276F08007FCF12 /* FlagListDataSource.swift */,
+				23EC01D42827869D007FCF12 /* FlagListFilterDataSource.swift */,
 			);
 			path = "Data Sources";
 			sourceTree = "<group>";
@@ -243,15 +243,15 @@
 				23354569265A3748003F246F /* VXGeoLocationData.swift in Sources */,
 				233545652659C0A4003F246F /* UIView+Ext.swift in Sources */,
 				2376A5DC26578A9000E9A128 /* AppDelegate.swift in Sources */,
-				23304BFA2658911C007ED020 /* FlagsListCell.swift in Sources */,
-				23EC01D128276EB4007FCF12 /* FlagsListViewController.swift in Sources */,
+				23304BFA2658911C007ED020 /* FlagListCell.swift in Sources */,
+				23EC01D128276EB4007FCF12 /* FlagListViewController.swift in Sources */,
 				239F69C1282B803E00E198D2 /* FlagDetailMapView.swift in Sources */,
 				2335456E265AD3BA003F246F /* VXGeoLocationManager.swift in Sources */,
 				2376A5DE26578A9000E9A128 /* SceneDelegate.swift in Sources */,
-				23EC01D52827869D007FCF12 /* FlagsListFilterDataSource.swift in Sources */,
+				23EC01D52827869D007FCF12 /* FlagListFilterDataSource.swift in Sources */,
 				233545602659A2AC003F246F /* FlagDetailViewController.swift in Sources */,
-				23EC01D328276F08007FCF12 /* FlagsListDataSource.swift in Sources */,
-				23304BFE2658CF82007ED020 /* FlagsListFilterViewController.swift in Sources */,
+				23EC01D328276F08007FCF12 /* FlagListDataSource.swift in Sources */,
+				23304BFE2658CF82007ED020 /* FlagListFilterViewController.swift in Sources */,
 				233545632659A4CA003F246F /* VXEmojiFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

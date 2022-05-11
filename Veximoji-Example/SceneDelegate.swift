@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let scene = (scene as? UIWindowScene) else { return }
     
-    let filterViewController = FlagsListFilterViewController(dataSource: FlagsListFilterDataSource())
-    let listViewController = FlagsListViewController(with: FlagsListDataSource(), filterViewController: filterViewController)
+    let filterViewController = FlagListFilterViewController(dataSource: FlagListFilterDataSource())
+    let listViewController = FlagListViewController(with: FlagListDataSource(), filterViewController: filterViewController)
     
     let navigationController = UINavigationController(rootViewController: listViewController)
     

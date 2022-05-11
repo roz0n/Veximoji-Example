@@ -1,5 +1,5 @@
 //
-//  FlagsListFilterDataSource.swift
+//  FlagListFilterDataSource.swift
 //  Veximoji-Example
 //
 //  Created by Arnaldo Rozon on 5/7/22.
@@ -8,7 +8,7 @@
 import UIKit
 import Veximoji
 
-final class FlagsListFilterDataSource: NSObject, UITableViewDataSource {
+final class FlagListFilterDataSource: NSObject, UITableViewDataSource {
   
   // MARK: -
   
@@ -44,7 +44,7 @@ final class FlagsListFilterDataSource: NSObject, UITableViewDataSource {
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let category = categoryData[indexPath.row]
-    let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListFilterViewController.reuseIdentifier,
+    let cell = tableView.dequeueReusableCell(withIdentifier: FlagListFilterViewController.reuseIdentifier,
                                              for: indexPath)
     
     cell.textLabel?.text = category.rawValue.capitalized

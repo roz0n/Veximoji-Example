@@ -1,5 +1,5 @@
 //
-//  FlagsListFilterViewController.swift
+//  FlagListFilterViewController.swift
 //  Veximoji Example
 //
 //  Created by Arnaldo Rozon on 5/22/21.
@@ -8,22 +8,22 @@
 import UIKit
 import Veximoji
 
-protocol FlagsListFilterDelegate {
+protocol FlagListFilterDelegate {
   func didTapCategory(_ category: EmojiFlagCategory)
 }
 
-final class FlagsListFilterViewController: UITableViewController {
+final class FlagListFilterViewController: UITableViewController {
   
   // MARK: -
   
   static let reuseIdentifier = "FlagsListFilterCell"
   
-  private var dataSource: FlagsListFilterDataSource
-  public var delegate: FlagsListFilterDelegate?
+  private var dataSource: FlagListFilterDataSource
+  public var delegate: FlagListFilterDelegate?
   
   // MARK: - Initializers
   
-  init(dataSource: FlagsListFilterDataSource) {
+  init(dataSource: FlagListFilterDataSource) {
     self.dataSource = dataSource
     super.init(style: .grouped)
   }
@@ -46,7 +46,7 @@ final class FlagsListFilterViewController: UITableViewController {
     
     tableView = customTable
     tableView.dataSource = dataSource
-    tableView.register(UITableViewCell.self, forCellReuseIdentifier: FlagsListFilterViewController.reuseIdentifier)
+    tableView.register(UITableViewCell.self, forCellReuseIdentifier: FlagListFilterViewController.reuseIdentifier)
     tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
   }
   
@@ -59,7 +59,7 @@ final class FlagsListFilterViewController: UITableViewController {
   
 }
 
-extension FlagsListFilterViewController {
+extension FlagListFilterViewController {
   
   // MARK: - UITableViewDelegate
   

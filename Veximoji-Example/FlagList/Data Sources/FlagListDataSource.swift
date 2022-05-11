@@ -1,5 +1,5 @@
 //
-//  FlagsListDataSource.swift
+//  FlagListDataSource.swift
 //  Veximoji-Example
 //
 //  Created by Arnaldo Rozon on 5/7/22.
@@ -8,7 +8,7 @@
 import UIKit
 import Veximoji
 
-final class FlagsListDataSource: NSObject, UITableViewDataSource, VXGeoLocationManagerDelegate {
+final class FlagListDataSource: NSObject, UITableViewDataSource, VXGeoLocationManagerDelegate {
   
   // MARK: -
   
@@ -68,7 +68,7 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource, VXGeoLocationM
   }
   
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCell(withIdentifier: FlagsListCell.reuseIdentifier, for: indexPath) as! FlagsListCell
+    let cell = tableView.dequeueReusableCell(withIdentifier: FlagListCell.reuseIdentifier, for: indexPath) as! FlagListCell
     let category = visibleCategories[indexPath.section]
     let code = flagData[category]?[indexPath.row]
     
@@ -92,7 +92,7 @@ final class FlagsListDataSource: NSObject, UITableViewDataSource, VXGeoLocationM
 
 // MARK: - VXGeoLocationManagerDelegate
 
-extension FlagsListDataSource {
+extension FlagListDataSource {
   
   func decodeSuccess(coords: [VXGeoLocationData]) {
     isoCodeCoords = coords

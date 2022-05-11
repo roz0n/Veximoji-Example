@@ -1,5 +1,5 @@
 //
-//  FlagsListCell.swift
+//  FlagListCell.swift
 //  Veximoji Example
 //
 //  Created by Arnaldo Rozon on 5/21/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FlagsListCell: UITableViewCell {
+class FlagListCell: UITableViewCell {
   
   static let reuseIdentifier = "FlagsListCell"
   

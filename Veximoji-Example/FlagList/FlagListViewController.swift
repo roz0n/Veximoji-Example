@@ -1,5 +1,5 @@
 //
-//  FlagsListViewController.swift
+//  FlagListViewController.swift
 //  Veximoji-Example
 //
 //  Created by Arnaldo Rozon on 5/7/22.
@@ -9,16 +9,16 @@ import UIKit
 import Veximoji
 import MapKit
 
-final class FlagsListViewController: UITableViewController, FlagsListFilterDelegate {
+final class FlagListViewController: UITableViewController, FlagListFilterDelegate {
   
   // MARK: -
   
-  private var dataSource: FlagsListDataSource
-  private var filterViewController: FlagsListFilterViewController
+  private var dataSource: FlagListDataSource
+  private var filterViewController: FlagListFilterViewController
   
   // MARK: - Initializers
   
-  init(with dataSource: FlagsListDataSource, filterViewController: FlagsListFilterViewController) {
+  init(with dataSource: FlagListDataSource, filterViewController: FlagListFilterViewController) {
     self.dataSource = dataSource
     self.filterViewController = filterViewController
     
@@ -47,7 +47,7 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
   // MARK: - Configuration
   
   private func configureTableView() {
-    tableView.register(FlagsListCell.self, forCellReuseIdentifier: FlagsListCell.reuseIdentifier)
+    tableView.register(FlagListCell.self, forCellReuseIdentifier: FlagListCell.reuseIdentifier)
     tableView.dataSource = dataSource
     tableView.reloadData()
   }
@@ -77,7 +77,7 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
     }
   }
   
-  // MARK: - FlagsListFilterDelegate
+  // MARK: - FlagListFilterDelegate
   
   func didTapCategory(_ category: EmojiFlagCategory) {
     if dataSource.hiddenCategories.contains(category) {
@@ -93,10 +93,10 @@ final class FlagsListViewController: UITableViewController, FlagsListFilterDeleg
 
 // MARK: - UITableViewDelegate
 
-extension FlagsListViewController {
+extension FlagListViewController {
   
   override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    let cell = tableView.cellForRow(at: indexPath) as! FlagsListCell
+    let cell = tableView.cellForRow(at: indexPath) as! FlagListCell
     
     if let data = cell.flagData {
       let map = FlagDetailMapView()
