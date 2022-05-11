@@ -7,38 +7,44 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		23304BFA2658911C007ED020 /* HomeViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BF92658911C007ED020 /* HomeViewCell.swift */; };
-		23304BFE2658CF82007ED020 /* FilterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BFD2658CF82007ED020 /* FilterTableViewController.swift */; };
-		233545602659A2AC003F246F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335455F2659A2AC003F246F /* DetailViewController.swift */; };
-		233545632659A4CA003F246F /* EmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545622659A4CA003F246F /* EmojiFlag.swift */; };
+		23304BFA2658911C007ED020 /* FlagsListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BF92658911C007ED020 /* FlagsListCell.swift */; };
+		23304BFE2658CF82007ED020 /* FlagsListFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23304BFD2658CF82007ED020 /* FlagsListFilterViewController.swift */; };
+		233545602659A2AC003F246F /* FlagDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335455F2659A2AC003F246F /* FlagDetailViewController.swift */; };
+		233545632659A4CA003F246F /* VXEmojiFlag.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545622659A4CA003F246F /* VXEmojiFlag.swift */; };
 		233545652659C0A4003F246F /* UIView+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 233545642659C0A4003F246F /* UIView+Ext.swift */; };
-		23354569265A3748003F246F /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23354568265A3748003F246F /* Location.swift */; };
-		2335456B265A37C5003F246F /* locations.json in Resources */ = {isa = PBXBuildFile; fileRef = 2335456A265A37C5003F246F /* locations.json */; };
-		2335456E265AD3BA003F246F /* LocationDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335456D265AD3BA003F246F /* LocationDataManager.swift */; };
+		23354569265A3748003F246F /* VXGeoLocationData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23354568265A3748003F246F /* VXGeoLocationData.swift */; };
+		2335456B265A37C5003F246F /* iso-geolocation-data.json in Resources */ = {isa = PBXBuildFile; fileRef = 2335456A265A37C5003F246F /* iso-geolocation-data.json */; };
+		2335456E265AD3BA003F246F /* VXGeoLocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2335456D265AD3BA003F246F /* VXGeoLocationManager.swift */; };
 		2376A5DC26578A9000E9A128 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5DB26578A9000E9A128 /* AppDelegate.swift */; };
 		2376A5DE26578A9000E9A128 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5DD26578A9000E9A128 /* SceneDelegate.swift */; };
 		2376A5E526578A9400E9A128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2376A5E426578A9400E9A128 /* Assets.xcassets */; };
 		2376A5E826578A9400E9A128 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2376A5E626578A9400E9A128 /* LaunchScreen.storyboard */; };
-		2376A5F026578EB700E9A128 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2376A5EF26578EB700E9A128 /* HomeViewController.swift */; };
-		2376A5F32657934E00E9A128 /* Veximoji in Frameworks */ = {isa = PBXBuildFile; productRef = 2376A5F22657934E00E9A128 /* Veximoji */; };
+		239F69BE282B17EE00E198D2 /* Veximoji in Frameworks */ = {isa = PBXBuildFile; productRef = 239F69BD282B17EE00E198D2 /* Veximoji */; };
+		239F69C1282B803E00E198D2 /* FlagDetailMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F69C0282B803E00E198D2 /* FlagDetailMapView.swift */; };
+		23EC01D128276EB4007FCF12 /* FlagsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */; };
+		23EC01D328276F08007FCF12 /* FlagsListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */; };
+		23EC01D52827869D007FCF12 /* FlagsListFilterDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23EC01D42827869D007FCF12 /* FlagsListFilterDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		23304BF92658911C007ED020 /* HomeViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewCell.swift; sourceTree = "<group>"; };
-		23304BFD2658CF82007ED020 /* FilterTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterTableViewController.swift; sourceTree = "<group>"; };
-		2335455F2659A2AC003F246F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		233545622659A4CA003F246F /* EmojiFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiFlag.swift; sourceTree = "<group>"; };
+		23304BF92658911C007ED020 /* FlagsListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListCell.swift; sourceTree = "<group>"; };
+		23304BFD2658CF82007ED020 /* FlagsListFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListFilterViewController.swift; sourceTree = "<group>"; };
+		2335455F2659A2AC003F246F /* FlagDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailViewController.swift; sourceTree = "<group>"; };
+		233545622659A4CA003F246F /* VXEmojiFlag.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXEmojiFlag.swift; sourceTree = "<group>"; };
 		233545642659C0A4003F246F /* UIView+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Ext.swift"; sourceTree = "<group>"; };
-		23354568265A3748003F246F /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		2335456A265A37C5003F246F /* locations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = locations.json; sourceTree = "<group>"; };
-		2335456D265AD3BA003F246F /* LocationDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataManager.swift; sourceTree = "<group>"; };
+		23354568265A3748003F246F /* VXGeoLocationData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXGeoLocationData.swift; sourceTree = "<group>"; };
+		2335456A265A37C5003F246F /* iso-geolocation-data.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "iso-geolocation-data.json"; sourceTree = "<group>"; };
+		2335456D265AD3BA003F246F /* VXGeoLocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VXGeoLocationManager.swift; sourceTree = "<group>"; };
 		2376A5D826578A9000E9A128 /* Veximoji-Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Veximoji-Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2376A5DB26578A9000E9A128 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2376A5DD26578A9000E9A128 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2376A5E426578A9400E9A128 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2376A5E726578A9400E9A128 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2376A5E926578A9400E9A128 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2376A5EF26578EB700E9A128 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		239F69C0282B803E00E198D2 /* FlagDetailMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagDetailMapView.swift; sourceTree = "<group>"; };
+		23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListViewController.swift; sourceTree = "<group>"; };
+		23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListDataSource.swift; sourceTree = "<group>"; };
+		23EC01D42827869D007FCF12 /* FlagsListFilterDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagsListFilterDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2376A5F32657934E00E9A128 /* Veximoji in Frameworks */,
+				239F69BE282B17EE00E198D2 /* Veximoji in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,9 +62,11 @@
 		23304BFB2658CF44007ED020 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				2376A5EF26578EB700E9A128 /* HomeViewController.swift */,
-				23304BFD2658CF82007ED020 /* FilterTableViewController.swift */,
-				2335455F2659A2AC003F246F /* DetailViewController.swift */,
+				239F69BF282B7CEF00E198D2 /* FlagDetail */,
+				23304BFC2658CF57007ED020 /* Cells */,
+				23EC01D62827C407007FCF12 /* Data Sources */,
+				23304BFD2658CF82007ED020 /* FlagsListFilterViewController.swift */,
+				23EC01D028276EB4007FCF12 /* FlagsListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -66,7 +74,7 @@
 		23304BFC2658CF57007ED020 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				23304BF92658911C007ED020 /* HomeViewCell.swift */,
+				23304BF92658911C007ED020 /* FlagsListCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -74,8 +82,8 @@
 		233545612659A4B6003F246F /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				23354568265A3748003F246F /* Location.swift */,
-				233545622659A4CA003F246F /* EmojiFlag.swift */,
+				23354568265A3748003F246F /* VXGeoLocationData.swift */,
+				233545622659A4CA003F246F /* VXEmojiFlag.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -91,7 +99,7 @@
 		23354567265A372E003F246F /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				2335456A265A37C5003F246F /* locations.json */,
+				2335456A265A37C5003F246F /* iso-geolocation-data.json */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -99,7 +107,7 @@
 		2335456C265AD3A4003F246F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
-				2335456D265AD3BA003F246F /* LocationDataManager.swift */,
+				2335456D265AD3BA003F246F /* VXGeoLocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -127,7 +135,6 @@
 				23354567265A372E003F246F /* Data */,
 				233545662659C0A7003F246F /* Extensions */,
 				233545612659A4B6003F246F /* Models */,
-				23304BFC2658CF57007ED020 /* Cells */,
 				23304BFB2658CF44007ED020 /* Controllers */,
 				2376A5DB26578A9000E9A128 /* AppDelegate.swift */,
 				2376A5DD26578A9000E9A128 /* SceneDelegate.swift */,
@@ -136,6 +143,24 @@
 				2376A5E926578A9400E9A128 /* Info.plist */,
 			);
 			path = "Veximoji-Example";
+			sourceTree = "<group>";
+		};
+		239F69BF282B7CEF00E198D2 /* FlagDetail */ = {
+			isa = PBXGroup;
+			children = (
+				2335455F2659A2AC003F246F /* FlagDetailViewController.swift */,
+				239F69C0282B803E00E198D2 /* FlagDetailMapView.swift */,
+			);
+			path = FlagDetail;
+			sourceTree = "<group>";
+		};
+		23EC01D62827C407007FCF12 /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				23EC01D228276F08007FCF12 /* FlagsListDataSource.swift */,
+				23EC01D42827869D007FCF12 /* FlagsListFilterDataSource.swift */,
+			);
+			path = "Data Sources";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +180,7 @@
 			);
 			name = "Veximoji-Example";
 			packageProductDependencies = (
-				2376A5F22657934E00E9A128 /* Veximoji */,
+				239F69BD282B17EE00E198D2 /* Veximoji */,
 			);
 			productName = VeximojiDemo;
 			productReference = 2376A5D826578A9000E9A128 /* Veximoji-Example.app */;
@@ -186,6 +211,7 @@
 			mainGroup = 2376A5CF26578A9000E9A128;
 			packageReferences = (
 				2376A5F12657934E00E9A128 /* XCRemoteSwiftPackageReference "Veximoji" */,
+				239F69BC282B17EE00E198D2 /* XCRemoteSwiftPackageReference "Veximoji" */,
 			);
 			productRefGroup = 2376A5D926578A9000E9A128 /* Products */;
 			projectDirPath = "";
@@ -202,7 +228,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2376A5E826578A9400E9A128 /* LaunchScreen.storyboard in Resources */,
-				2335456B265A37C5003F246F /* locations.json in Resources */,
+				2335456B265A37C5003F246F /* iso-geolocation-data.json in Resources */,
 				2376A5E526578A9400E9A128 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,16 +240,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23354569265A3748003F246F /* Location.swift in Sources */,
+				23354569265A3748003F246F /* VXGeoLocationData.swift in Sources */,
 				233545652659C0A4003F246F /* UIView+Ext.swift in Sources */,
 				2376A5DC26578A9000E9A128 /* AppDelegate.swift in Sources */,
-				23304BFA2658911C007ED020 /* HomeViewCell.swift in Sources */,
-				2335456E265AD3BA003F246F /* LocationDataManager.swift in Sources */,
+				23304BFA2658911C007ED020 /* FlagsListCell.swift in Sources */,
+				23EC01D128276EB4007FCF12 /* FlagsListViewController.swift in Sources */,
+				239F69C1282B803E00E198D2 /* FlagDetailMapView.swift in Sources */,
+				2335456E265AD3BA003F246F /* VXGeoLocationManager.swift in Sources */,
 				2376A5DE26578A9000E9A128 /* SceneDelegate.swift in Sources */,
-				233545602659A2AC003F246F /* DetailViewController.swift in Sources */,
-				23304BFE2658CF82007ED020 /* FilterTableViewController.swift in Sources */,
-				233545632659A4CA003F246F /* EmojiFlag.swift in Sources */,
-				2376A5F026578EB700E9A128 /* HomeViewController.swift in Sources */,
+				23EC01D52827869D007FCF12 /* FlagsListFilterDataSource.swift in Sources */,
+				233545602659A2AC003F246F /* FlagDetailViewController.swift in Sources */,
+				23EC01D328276F08007FCF12 /* FlagsListDataSource.swift in Sources */,
+				23304BFE2658CF82007ED020 /* FlagsListFilterViewController.swift in Sources */,
+				233545632659A4CA003F246F /* VXEmojiFlag.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,12 +456,20 @@
 				kind = branch;
 			};
 		};
+		239F69BC282B17EE00E198D2 /* XCRemoteSwiftPackageReference "Veximoji" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roz0n/Veximoji";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2376A5F22657934E00E9A128 /* Veximoji */ = {
+		239F69BD282B17EE00E198D2 /* Veximoji */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 2376A5F12657934E00E9A128 /* XCRemoteSwiftPackageReference "Veximoji" */;
+			package = 239F69BC282B17EE00E198D2 /* XCRemoteSwiftPackageReference "Veximoji" */;
 			productName = Veximoji;
 		};
 /* End XCSwiftPackageProductDependency section */

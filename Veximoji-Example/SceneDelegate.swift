@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Veximoji
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
   
@@ -18,10 +19,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     guard let scene = (scene as? UIWindowScene) else { return }
     
-    let homeViewController = HomeViewController()
-    let navigationController = UINavigationController(rootViewController: homeViewController)
+    let filterViewController = FlagsListFilterViewController(dataSource: FlagsListFilterDataSource())
+    let listViewController = FlagsListViewController(with: FlagsListDataSource(), filterViewController: filterViewController)
     
-    homeViewController.navigationItem.title = "Veximoji"
+    let navigationController = UINavigationController(rootViewController: listViewController)
+    
+    listViewController.navigationItem.title = "Veximoji"
     navigationController.navigationBar.prefersLargeTitles = true
     navigationController.navigationBar.tintColor = UIColor(named: "AccentColor")
         

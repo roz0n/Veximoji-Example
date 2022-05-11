@@ -1,5 +1,5 @@
 //
-//  HomeViewCell.swift
+//  FlagsListCell.swift
 //  Veximoji Example
 //
 //  Created by Arnaldo Rozon on 5/21/21.
@@ -7,11 +7,11 @@
 
 import UIKit
 
-class HomeViewCell: UITableViewCell {
+class FlagsListCell: UITableViewCell {
   
-  static let reuseId = "vxCell"
-    
-  var flagData: EmojiFlag? {
+  static let reuseIdentifier = "FlagsListCell"
+  
+  var flagData: VXEmojiFlag? {
     didSet {
       guard let data = flagData else { return }
       
@@ -43,9 +43,10 @@ class HomeViewCell: UITableViewCell {
   let codeLabel: UILabel = {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
-    label.backgroundColor = .systemGray5
+    label.backgroundColor = UIColor(named: "AccentColor")?.withAlphaComponent(0.1)
     label.numberOfLines = 1
-    label.font = UIFont.monospacedSystemFont(ofSize: 16, weight: .regular)
+    label.font = UIFont.monospacedSystemFont(ofSize: 12, weight: .semibold)
+    label.textColor = UIColor(named: "AccentColor")
     label.textAlignment = .center
     label.layer.cornerRadius = 4
     label.layer.masksToBounds = true
@@ -56,17 +57,18 @@ class HomeViewCell: UITableViewCell {
     let label = UILabel()
     label.translatesAutoresizingMaskIntoConstraints = false
     label.numberOfLines = 1
-    label.font = UIFont.monospacedSystemFont(ofSize: 16, weight: .regular)
+    label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
     label.layer.cornerRadius = 4
     label.layer.masksToBounds = true
     return label
   }()
   
-  // MARK: Initializers
+  // MARK: - Initializers
   
   override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     super.init(style: style, reuseIdentifier: reuseIdentifier)
     
+    configureSelectedBackground()
     layoutStackContainer()
     layoutLabels()
   }
@@ -75,11 +77,20 @@ class HomeViewCell: UITableViewCell {
     fatalError("init(coder:) has not been implemented")
   }
   
+  // MARK: - Configuration
+  
+  private func configureSelectedBackground() {
+    let background = UIView()
+    
+    background.backgroundColor = UIColor(named: "AccentColor")?.withAlphaComponent(0.1)
+    selectedBackgroundView = background
+  }
+  
   // MARK: - Layout
   
   private func layoutStackContainer() {
     let padding: CGFloat = 16
-
+    
     addSubview(stackContainter)
     
     NSLayoutConstraint.activate([
